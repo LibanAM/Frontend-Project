@@ -1,11 +1,11 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
+  /* background-color: #816afe; */
+  /* background: linear-gradient(#242f98, #9ba3eb); */
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -37,7 +37,7 @@
   }
 }
 
-.button{
+/* .button{
 width: 200px;
 display: flex;
 align-items: center;
@@ -51,10 +51,10 @@ justify-content: center;
   height: 24px;
   overflow: hidden;
   /* background-image: url("arrow-right.svg"); */
-  transition: width 200ms, margin-left 200ms;
+  /* transition: width 200ms, margin-left 200ms;
 }
 
 .button:is(:hover, :focus)::after{
   width:24px;
   margin-left: 8px;
-}
+} */

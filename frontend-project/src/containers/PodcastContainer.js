@@ -14,7 +14,7 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
     // if there is user logged in, when click 'log out'
     // set isLogin 'false', set currentp odcast account empty {}
     const handleLogin = (event) => {
-        event.preventDefault();
+        
         
         if(isLogin && currentPodCastAcc.length !=0){
             setIsLogin(!isLogin);

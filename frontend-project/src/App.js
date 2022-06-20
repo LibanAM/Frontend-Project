@@ -5,6 +5,7 @@ import Explore from './containers/Explore';
 import Pricing from './containers/Pricing';
 import Account from './containers/Account';
 import Login from './containers/Login';
+import SignUp from './containers/SignUp';
 import Home from './containers/Home';
 import usePersistedState from './components/usePersistedState';
 
@@ -26,7 +27,9 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/explore' element={<Explore/>}></Route>
           <Route path='/pricing' element={<Pricing/>}></Route>
-          <Route path='/account' element={<Account/>}></Route>
+
+          <Route path='/account' element={isLogin? <Account/>: <SignUp/>}></Route>
+
           <Route path='/login' element={<Login isLogin={isLogin} setIsLogin={setIsLogin}
                                                currentPodCastAcc={currentPodCastAcc}
                                                setCurrentPodCastAcc={setCurrentPodCastAcc}/>}>

@@ -1,50 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-import { useNavigate} from "react-router-dom";
 import {BsGoogle, BsTwitter, BsGithub} from 'react-icons/bs';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
-import './Login.css';
-
-const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =>{
-
-    const navigate = useNavigate();
-
-    const inputEmail = useRef();
-    const inputPassword = useRef();
-    const [allUsers, setAllUsers] = useState([]);
-    const [passwordShown, setPasswordShown] = useState(false);
-
-    useEffect(()=>{
-        fetch("http://localhost:8080/users")
-        .then(response => response.json())
-        .then(data => setAllUsers(data))
-
-    },[])
-
-    const handleLogin = (event) => {
-        
-        const currentUser = allUsers.filter(user => user.email == inputEmail.current.value &&
-                                                    user.password == inputPassword.current.value);
-        if (currentUser.length == 0) return;
-
-        setCurrentPodCastAcc(currentUser);
-        setIsLogin(!isLogin);
-        navigate('/explore');
-
-    }
-
-    const handlePasswordShown = (event) => {
-        event.preventDefault();
-        setPasswordShown(!passwordShown);
-    }
 
 
+const SignUp = () => {
 
-    return(
-
-        <div className="login-container">
+    return (
+        <div className="sign-up-container">
             <form>
-                <h1>LOG IN WITH</h1>
+                <h1>SIGN UP WITH</h1>
                 <ul>
                     <li><a href="wwww.google.co.uk"><button><BsGoogle/></button></a></li>
                     <li><a href="wwww.twitter.com"><button><BsTwitter /></button></a></li>
@@ -52,6 +16,7 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                     <li><a href="wwww.github.com"><button><BsGithub /></button></a></li>
                 </ul>
                 <p className="or-line"><div> Or </div></p>
+                
                 <br/>
                 <p>Your Email</p>
                 <input type="text" ref={inputEmail}/>
@@ -64,10 +29,11 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                 <br/>
                 <button onClick={handleLogin}>Go Inside</button>
                 <p>Do you need an account?</p>
+
             </form>
 
         </div>
     );
 }
 
-export default Login;
+export default SignUp;
