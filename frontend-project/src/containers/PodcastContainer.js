@@ -8,28 +8,7 @@ import PodcastList from "../components/PodcastList";
 
 const PodcastContainer = ({ isLogin, setIsLogin }) => {
 
-    const [podcasts, setPodcasts] = useState([]);
-
-
-    useEffect(() => {
-        fetch('http://localhost:8080/podcasts')
-            .then(response => response.json())
-            .then(data => setPodcasts(data))
-    }, [])
-
-    const postPodcast = (newPodcast) => {
-        fetch('http://localhost:8080/podcasts',
-        {
-            method: "POST",
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify(newPodcast)
-        })
-        .then(response => response.json())
-        .then(data => setPodcasts([...podcasts, data]))
-    }
-
-
-
+    
     return (
         <div className="nav-bar">
             <ul className="nar-ul">
@@ -39,7 +18,6 @@ const PodcastContainer = ({ isLogin, setIsLogin }) => {
                 <li><Link to='/account'><button>{isLogin ? "Account" : "Sign Up"}</button></Link></li>
                 <li><Link to='/login'><button>Login</button></Link></li>
             </ul>
-            {/* <PodcastList podcasts={podcasts}/> */}
         </div>
     );
 }

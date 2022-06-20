@@ -1,0 +1,14 @@
+
+
+.or-line{
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 0.5px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+}
+
+.or-line > div {
+    background:#fff; 
+    padding:0 10px; 
+}

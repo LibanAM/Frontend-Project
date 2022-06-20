@@ -11,7 +11,9 @@ import usePersistedState from './components/usePersistedState';
 function App() {
   
   const [isLogin, setIsLogin] = usePersistedState('isLogin',false);
-  const [currentAccount, setCurrentAccount] = usePersistedState('currentAccount',{});
+  //const [currentAccount, setCurrentAccount] = usePersistedState('currentAccount', localStorage.getItem('currentAccount') ? JSON.parse(localStorage.getItem('currentAccount')) : []);
+  const [currentPodCastSAcc, setCurrentPodCastSAcc] = usePersistedState('currentPodCastSAcc', {});
+
 
   return (
     <Router>
@@ -24,8 +26,8 @@ function App() {
           <Route path='/pricing' element={<Pricing/>}></Route>
           <Route path='/account' element={<Account/>}></Route>
           <Route path='/login' element={<Login isLogin={isLogin} setIsLogin={setIsLogin}
-                                               currentAccount={currentAccount}
-                                               setCurrentAccount={setCurrentAccount}/>}>
+                                               currentPodCastSAcc={currentPodCastSAcc}
+                                               setCurrentPodCastSAcc={setCurrentPodCastSAcc}/>}>
           </Route>
         </Routes>
 

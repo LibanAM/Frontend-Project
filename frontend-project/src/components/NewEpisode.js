@@ -12,7 +12,13 @@ const NewEpisode = ({postEpisode}) =>{
         }
     )
 
-
+    const handleChange = (event) => {
+        console.log(event);
+        let propertyName = event.target.name;
+        let copiedEpisode = {...stateEpisode};
+        copiedEpisode[propertyName] = event.target.value;
+        setStateEpisode(copiedEpisode)
+    }
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -24,7 +30,10 @@ const NewEpisode = ({postEpisode}) =>{
             <h3>Add a new episode: </h3>
             <input 
                 type="text" 
-                placeholder="Episode Name"/>
+                placeholder="Episode Name"
+                onChange={handleChange}
+                value={stateEpisode.name}
+                />
             <input type="text" placeholder="Episode Description"/>
             <input type="text" placeholder="Episode Rating"/>
             <select></select>

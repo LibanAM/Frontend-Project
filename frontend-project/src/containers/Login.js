@@ -2,8 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate} from "react-router-dom";
 import {BsGoogle, BsTwitter, BsGithub} from 'react-icons/bs';
 import {FaLinkedinIn} from 'react-icons/fa';
+import './Login.css';
 
-const Login = ({isLogin, setIsLogin, currentAccount, setCurrentAccount}) =>{
+const Login = ({isLogin, setIsLogin, currentPodCastSAcc, setCurrentPodCastSAcc}) =>{
 
     const navigate = useNavigate();
     const inputEmail = useRef();
@@ -30,7 +31,16 @@ const Login = ({isLogin, setIsLogin, currentAccount, setCurrentAccount}) =>{
                     <li><a href="wwww.linkedin.com"><button><FaLinkedinIn /></button></a></li>
                     <li><a href="wwww.github.com"><button><BsGithub /></button></a></li>
                 </ul>
-                <p><div>Or</div></p>
+                <p className="or-line"><div> Or </div></p>
+                <br/>
+                <p>Your Email</p>
+                <input type="text" ref={inputEmail}/>
+                <p>Password</p>
+                <input  type="password" ref={inputPassword}/>
+                <a href="">Log in as Adimin?</a> <a>Forget your password?</a>
+                <button>Go Inside</button>
+
+
                 
             </form>
 

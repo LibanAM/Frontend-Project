@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.button{
+width: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.button::after{
+  content: "";
+  display: block;
+  width: 0px;
+  height: 24px;
+  overflow: hidden;
+  background-image: url("arrow")
+}
