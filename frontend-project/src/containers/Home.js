@@ -54,31 +54,33 @@ const Home = () => {
                             <img src={GooglePlay} alt="Get it on Google Play" />
                         </div>
                     </div>
+                    
                     <ul>
                         <h3>Product</h3>
-                        <li>Download</li>
-                        <li>Pricing</li>
-                        <li>Locations</li>
-                        <li>Server</li>
-                        <li>Countries</li>
-                        <li>Blog</li>
+                        <li><a target="blank" href="#">Download</a></li>
+                        <li><a target="blank" href="#">Pricing</a></li>
+                        <li><a target="blank" href="#">Locations</a></li>
+                        <li><a target="blank" href="#">Server</a></li>
+                        <li><a target="blank" href="#">Countries</a></li>
+                        <li><a target="blank" href="#">Blog</a></li>
                     </ul>
 
                     <ul>
                         <h3>Company</h3>
-                        <li>FAQ</li>
-                        <li>Tutorials</li>
-                        <li>About Us</li>
-                        <li>We're hiring!</li>
-                        <li>Support</li>
+                        <li><a target="blank" href="#">FAQ</a></li>
+                        <li><a target="blank" href="#">Tutorials</a></li>
+                        <li><a target="blank" href="#">About Us</a></li>
+                        <li><a target="blank" href="#">Careers</a></li>
+                        <li><a target="blank" href="#">Support</a></li>
                     </ul>
 
                     <ul>
                         <h3>Privacy</h3>
-                        <li>Privacy</li>
-                        <li>Terms of use</li>
-                        <li>Site map</li>
+                        <li><a target="blank" href="#">Privacy</a></li>
+                        <li><a target="blank" href="#">Terms of Use</a></li>
+                        <li><a target="blank" href="#">Site map</a></li>
                     </ul>
+                    
                 </footer>
             </div>
         </>

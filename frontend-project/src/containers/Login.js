@@ -69,7 +69,7 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                 <div className="account-btn">
                 <button onClick={handleLogin}>Go Inside</button>
                 </div>
-                <p>Do you need an account? Create new account</p>
+                <p>Do you need an account? <a href="/account">Create new account</a></p>
             </form>
 
         </div>

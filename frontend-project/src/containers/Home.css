@@ -56,6 +56,7 @@ div > #footer {
     margin: 0;
 }
 
-.logo{
-    padding: 0 8px;
+.product-list{
+    list-style: none;
+    text-decoration: none;
 }

@@ -23,7 +23,8 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
     },[])
 
     // postmapping, create a new user
-    const handleSignUp = () => {
+    const handleSignUp = (event) => {
+        event.preventDefault();
 
         const newPodcastUser = {
             username: inputNewUsername.current.value,
@@ -31,10 +32,11 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
             email: inputNewEmail.current.value,
             admin: false  
         };
-        fetch("http://localhoset:8080/users",
+
+        fetch("http://localhost:8080/users",
         {
-            method:"POST",
-            headers: {"Content-Type" : "application/json"},
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(newPodcastUser)
         })
         .then(response => response.json())
@@ -121,7 +123,7 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
                 <br/>
                 <button onClick={handleSignUp} id="sign-up-btn">Sign up</button>
 
-                <p>Do you already have an account?Log in</p>
+                <p>Do you already have an account?<a href="/login">Log in</a></p>
 
             </form>
 
