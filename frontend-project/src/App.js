@@ -29,7 +29,8 @@ function App() {
           <Route path='/pricing' element={<Pricing/>}></Route>
 
           <Route path='/account' element={isLogin? <Account/>: 
-                                                   <SignUp currentPodCastAcc={currentPodCastAcc}
+                                                   <SignUp isLogin={isLogin} setIsLogin={setIsLogin}
+                                                           currentPodCastAcc={currentPodCastAcc}
                                                            setCurrentPodCastAcc={setCurrentPodCastAcc} />}>
 
           </Route>

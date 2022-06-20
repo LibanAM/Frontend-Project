@@ -3,8 +3,11 @@ import {FaLinkedinIn} from 'react-icons/fa';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
 import {useRef, useEffect, useState} from 'react';
 import weakPassword from '../images/Frame 1242.png';
+import lessStrongPassword from '../images/Frame 1243.png';
+import strongPassword from '../images/Frame 1244.png';
+import './SignUp.css';
 
-const SignUp = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
+const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) => {
 
     const inputNewEmail = useRef();
     const inputNewPassword = useRef();
@@ -25,8 +28,9 @@ const SignUp = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
         const newPodcastUser = {
             username: inputNewUsername.current.value,
             password: inputNewPassword.current.value,
-            email: inputNewEmail.current.value
-        }
+            email: inputNewEmail.current.value,
+            admin: false  
+        };
         fetch("http://localhoset:8080/users",
         {
             method:"POST",
@@ -35,13 +39,14 @@ const SignUp = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
         })
         .then(response => response.json())
         .then(savedPodcastUser => setCurrentPodCastAcc(savedPodcastUser))
-
+        setIsLogin(!isLogin);
+        
     }
 
     // check if the username already exists
     const handleExisitedUserName = () => {
         const allUserNames = allUsers.map(user => {return user.username;});
-        console.log(allUserNames)
+        
         if(allUserNames.includes(inputNewUsername.current.value)){
             document.querySelector('.new-user-username-input').innerHTML="This username already exists";
         }
@@ -62,11 +67,20 @@ const SignUp = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
     // check if the password is strong enough or not
     const handlePasswordChecker = () => {
-        if(inputNewPassword.current.value=='1234' || inputNewPassword.current.value=='abc'){
-            document.querySelector('.new-user-password-input').innerHTML="<img src={weakPassword} alt=\"weak password\"/>";
+        const specialSymbol = ['!', '?', '@', '.', '_', '/', '#', '$', '(', ')', '^', '%',
+                               '*', ':', ';', '+'];
+
+        if(inputNewPassword.current.value=='1234' || inputNewPassword.current.value=='abc'
+           || inputNewPassword.current.value.length < 8){
+            document.querySelector('.new-user-password-input').innerHTML=`<img src=${weakPassword} alt="weak password"/>`;
+        }
+        else if(specialSymbol.filter(s => inputNewPassword.current.value.includes(s)).length == 0){
+            document.querySelector('.new-user-password-input').innerHTML=`<img src=${lessStrongPassword} alt="weak password"/>`;
+        }
+        else {
+            document.querySelector('.new-user-password-input').innerHTML=`<img src=${strongPassword} alt="weak password"/>`;
         }
     }
-
 
 
     // click to show or not the password
@@ -74,6 +88,7 @@ const SignUp = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
         event.preventDefault();
         setPasswordShown(!passwordShown);
     }
+
 
     return (
         <div className="sign-up-container">
@@ -97,12 +112,15 @@ const SignUp = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
                 <p className='new-user-email-input'></p>
 
                 <p>Password</p>
-                <input  type={passwordShown? "text" : "password"} ref={inputNewPassword}/><br/>
+                <input  type={passwordShown? "text" : "password"} ref={inputNewPassword} onChange={handlePasswordChecker}/><br/>
                 <button onClick={handlePasswordShown}>{passwordShown? <AiOutlineEye/> : <AiOutlineEyeInvisible/> }</button>
                 <p className='new-user-password-input'></p>
-
                 <br/>
-                <button onClick={handleSignUp}>Sign up</button>
+                <input type="checkbox" id='sign-up-condition-box' className='sign-up-terms-box'/>
+                <label htmlFor="sign-up-condition-box">I agree to terms & condictions.</label>
+                <br/>
+                <button onClick={handleSignUp} id="sign-up-btn">Sign up</button>
+
                 <p>Do you already have an account?Log in</p>
 
             </form>

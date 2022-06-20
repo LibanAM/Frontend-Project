@@ -1,24 +1,47 @@
 h2 {
-    background-color: #8a75fe;
+    background-color: #646fd4;
     padding: 0;
     margin: 0;
 }
 
 #gradient-1 {
-    background: linear-gradient(#8a75fe, #9ba3eb);
+    background: linear-gradient(#646fd4, white);
     /* background-color: #816afe; */
 }
 
 #gradient-2 {
-    background: linear-gradient(#9ba3eb, white);
+    background: linear-gradient(white, #dbdffd );
 
 }
 
-
-div > #footer{
+#section-3{
     display: flex;
     justify-content: space-around;
 }
+
+#section-3-text-rhs{
+    padding: center;
+}
+
+
+div > #footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer > ul {
+    list-style: none;
+}
+
+#footer-left-side {
+    display: block;
+}
+
+#Download-images {
+    display: flex;
+    justify-content: space-around;
+}
+
 #one-liner-pt1 {
     color: #81e2a8;
     font-weight: 800;
@@ -31,4 +54,8 @@ div > #footer{
     font-weight: 800;
     padding: 0;
     margin: 0;
+}
+
+.logo{
+    padding: 0 8px;
 }

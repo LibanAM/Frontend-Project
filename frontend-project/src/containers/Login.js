@@ -25,7 +25,10 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
         
         const currentUser = allUsers.filter(user => user.email == inputEmail.current.value &&
                                                     user.password == inputPassword.current.value);
-        if (currentUser.length == 0) return;
+        if (currentUser.length == 0) {
+            alert("Invalid email adress or password! Please try again!")
+            return
+        };
 
         setCurrentPodCastAcc(currentUser);
         setIsLogin(!isLogin);
@@ -63,7 +66,9 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                 <a href="">Log in as Admin?</a>
                 <a>Forget your password?</a>
                 <br/>
+                <div className="account-btn">
                 <button onClick={handleLogin}>Go Inside</button>
+                </div>
                 <p>Do you need an account? Create new account</p>
             </form>
 
