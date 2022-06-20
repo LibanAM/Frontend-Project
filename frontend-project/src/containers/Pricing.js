@@ -1,9 +1,7 @@
 const Pricing = () => {
 
     return(
-        <>
-
-        </>
+        <h2>Price</h2>
     );
 }
 

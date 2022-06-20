@@ -1,6 +1,8 @@
 import PostcastList from "../components/PodcastList";
 import NewPodcast from "../components/NewPodcast";
 import { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
+import './PodcastContainer.css';
 
 const PodcastContainer = () => {
     
@@ -17,7 +19,7 @@ const PodcastContainer = () => {
 
     return(
         <div>
-            <ul>
+            <ul className="nar-ul">
                 <li><Link to='/'></Link>Home</li>
                 <li><Link to='/explore'></Link>Explore</li>
                 <li><Link to='/pricing'></Link>Pricing</li>
