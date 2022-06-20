@@ -7,4 +7,4 @@ const Pricing = () => {
     );
 }
 
-export
+export default Pricing;

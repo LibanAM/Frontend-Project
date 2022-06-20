@@ -1,8 +1,11 @@
 import './App.css';
 import PodcastContainer from './containers/PodcastContainer';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import Home from '.containers/Home';
-import 
+import Explore from './containers/Explore';
+import Pricing from './containers/Pricing';
+import Account from './containers/Account';
+import Login from './containers/Login';
+import Home from './containers/Home';
 
 
 function App() {

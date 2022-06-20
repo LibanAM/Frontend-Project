@@ -1,5 +1,3 @@
-import Podcast from "./Podcast";
-
 const PodcastList = () => {
     return(
         <>
@@ -7,4 +5,4 @@ const PodcastList = () => {
     );
 }
 
-export default PostcastList;
+export default PodcastList;
