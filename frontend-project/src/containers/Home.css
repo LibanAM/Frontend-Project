@@ -1,3 +1,34 @@
-div{
-    background: linear-gradient(#242f98, #9ba3eb);
+h2 {
+    background-color: #8a75fe;
+    padding: 0;
+    margin: 0;
+}
+
+#gradient-1 {
+    background: linear-gradient(#8a75fe, #9ba3eb);
+    /* background-color: #816afe; */
+}
+
+#gradient-2 {
+    background: linear-gradient(#9ba3eb, white);
+
+}
+
+
+div > #footer{
+    display: flex;
+    justify-content: space-around;
+}
+#one-liner-pt1 {
+    color: #81e2a8;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}
+
+#one-liner-pt2 {
+    color: black;
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
 }

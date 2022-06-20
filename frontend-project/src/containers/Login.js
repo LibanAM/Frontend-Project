@@ -33,6 +33,7 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
 
     }
 
+    // show password or not
     const handlePasswordShown = (event) => {
         event.preventDefault();
         setPasswordShown(!passwordShown);
@@ -63,7 +64,7 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                 <a>Forget your password?</a>
                 <br/>
                 <button onClick={handleLogin}>Go Inside</button>
-                <p>Do you need an account?</p>
+                <p>Do you need an account? Create new account</p>
             </form>
 
         </div>
