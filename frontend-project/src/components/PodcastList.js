@@ -1,7 +1,7 @@
 import Podcast from "./Podcast";
 
 
-const PodcastList = ({podcasts}) => {
+const PodcastList = ({podcasts, deletePodcast}) => {
 
     const podcastsComponents = podcasts.map(podcast => {
         return <Podcast key = {podcast.id} podcast = {podcast}/>

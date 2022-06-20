@@ -12,22 +12,24 @@ function App() {
   
   const [isLogin, setIsLogin] = usePersistedState('isLogin',false);
   //const [currentAccount, setCurrentAccount] = usePersistedState('currentAccount', localStorage.getItem('currentAccount') ? JSON.parse(localStorage.getItem('currentAccount')) : []);
-  const [currentPodCastSAcc, setCurrentPodCastSAcc] = usePersistedState('currentPodCastSAcc', {});
+  const [currentPodCastAcc, setCurrentPodCastAcc] = usePersistedState('currentPodCastAcc', {});
 
 
   return (
     <Router>
     <div className="App">
       
-        <PodcastContainer isLogin={isLogin} setIsLogin={setIsLogin} />
+        <PodcastContainer isLogin={isLogin} setIsLogin={setIsLogin}
+                          currentPodCastAcc={currentPodCastAcc}
+                          setCurrentPodCastAcc={setCurrentPodCastAcc} />
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/explore' element={<Explore/>}></Route>
           <Route path='/pricing' element={<Pricing/>}></Route>
           <Route path='/account' element={<Account/>}></Route>
           <Route path='/login' element={<Login isLogin={isLogin} setIsLogin={setIsLogin}
-                                               currentPodCastSAcc={currentPodCastSAcc}
-                                               setCurrentPodCastSAcc={setCurrentPodCastSAcc}/>}>
+                                               currentPodCastAcc={currentPodCastAcc}
+                                               setCurrentPodCastAcc={setCurrentPodCastAcc}/>}>
           </Route>
         </Routes>
 

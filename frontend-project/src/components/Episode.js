@@ -1,9 +1,9 @@
-const Episode = () =>{
+const Episode = ({episodes, deleteEpisode}) =>{
     return(
         <div>
-            <h3>{episode.name}</h3>
-            <p>Description: {episode.description}</p>
-            <p>Duration: {episode.duration}</p>
+            <h3>{episodes.name}</h3>
+            <p>Description: {episodes.description}</p>
+            <p>Duration: {episodes.duration}</p>
         </div>
     );
 }

@@ -2,14 +2,17 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate} from "react-router-dom";
 import {BsGoogle, BsTwitter, BsGithub} from 'react-icons/bs';
 import {FaLinkedinIn} from 'react-icons/fa';
+import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
 import './Login.css';
 
-const Login = ({isLogin, setIsLogin, currentPodCastSAcc, setCurrentPodCastSAcc}) =>{
+const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =>{
 
     const navigate = useNavigate();
+
     const inputEmail = useRef();
     const inputPassword = useRef();
     const [allUsers, setAllUsers] = useState([]);
+    const [passwordShown, setPasswordShown] = useState(false);
 
     useEffect(()=>{
         fetch("http://localhost:8080/users")
@@ -18,13 +21,32 @@ const Login = ({isLogin, setIsLogin, currentPodCastSAcc, setCurrentPodCastSAcc})
 
     },[])
 
+    const handleLogin = (event) => {
+        
+
+        
+        const currentUser = allUsers.filter(user => user.email == inputEmail.current.value &&
+                                                    user.password == inputPassword.current.value);
+        if (currentUser.length == 0) return;
+
+        setCurrentPodCastAcc(currentUser);
+        setIsLogin(!isLogin);
+        navigate('/explore');
+
+    }
+
+    const handlePasswordShown = (event) => {
+        event.preventDefault();
+        setPasswordShown(!passwordShown);
+    }
+
 
 
     return(
 
         <div className="login-container">
             <form>
-                <h2>LOG IN WITH</h2>
+                <h1>LOG IN WITH</h1>
                 <ul>
                     <li><a href="wwww.google.co.uk"><button><BsGoogle/></button></a></li>
                     <li><a href="wwww.twitter.com"><button><BsTwitter /></button></a></li>
@@ -36,12 +58,14 @@ const Login = ({isLogin, setIsLogin, currentPodCastSAcc, setCurrentPodCastSAcc})
                 <p>Your Email</p>
                 <input type="text" ref={inputEmail}/>
                 <p>Password</p>
-                <input  type="password" ref={inputPassword}/>
-                <a href="">Log in as Adimin?</a> <a>Forget your password?</a>
-                <button>Go Inside</button>
-
-
+                <input  type="password" ref={inputPassword}/><br/>
+                <button onClick={handlePasswordShown}>{passwordShown? <AiOutlineEye/> : <AiOutlineEyeInvisible/> }</button>
                 
+                <a href="">Log in as Admin?</a>
+                <a>Forget your password?</a>
+                <br/>
+                <button onClick={handleLogin}>Go Inside</button>
+                <p>Do you need an account?</p>
             </form>
 
         </div>

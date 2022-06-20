@@ -1,10 +1,13 @@
-const Podcast = ({podcast}) => {
+const Podcast = ({podcasts, deletePodcast}) => {
 
     return(
         <div>
-            <h3>{podcast.title}</h3>
-            <p>Title: {podcast.title}</p>
-            <p>Decription: {podcast.description}</p>
+            <h3>{podcasts.title}</h3>
+            <p>Title: {podcasts.title}</p>
+            <p>Content note: {podcasts.contentNote}</p>
+            <p>Description: {podcasts.description}</p>
+            <p>Rating: {podcasts.rating}/5</p>
+            {/* <p>{podcast.podcastEpisodes}</p> */}
         </div>
     );
 }

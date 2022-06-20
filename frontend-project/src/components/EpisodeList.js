@@ -1,6 +1,6 @@
 import Episode from "./Episode";
 
-const EpisodeList = ({episodes}) =>{
+const EpisodeList = ({episodes, deleteEpisode}) =>{
     
     const episodesComponents = episodes.map(episode =>{
         return <Episode key = {episode.id} episode = {episode}/>

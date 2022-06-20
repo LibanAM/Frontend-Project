@@ -31,11 +31,32 @@ const NewEpisode = ({postEpisode}) =>{
             <input 
                 type="text" 
                 placeholder="Episode Name"
+                name="name"
                 onChange={handleChange}
                 value={stateEpisode.name}
                 />
-            <input type="text" placeholder="Episode Description"/>
-            <input type="text" placeholder="Episode Rating"/>
+            <input 
+                type="text" 
+                placeholder="Episode Description"
+                name="description"
+                onChange={handleChange}
+                value={stateEpisode.description}
+                />
+
+            <input 
+                type="text" 
+                placeholder="Episode Duration"
+                name="duration"
+                onChange={handleChange}
+                value={stateEpisode.duration}
+                />
+            <input 
+                type="text" 
+                placeholder="Episode Posted"
+                name="datePosted"
+                onChange={handleChange}
+                value={stateEpisode.datePosted}
+                />
             <select></select>
             <button type="submit">Submit</button>
         </form>

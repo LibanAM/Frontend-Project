@@ -50,5 +50,11 @@ justify-content: center;
   width: 0px;
   height: 24px;
   overflow: hidden;
-  background-image: url("arrow")
+  /* background-image: url("arrow-right.svg"); */
+  transition: width 200ms, margin-left 200ms;
+}
+
+.button:is(:hover, :focus)::after{
+  width:24px;
+  margin-left: 8px;
 }

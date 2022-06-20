@@ -6,8 +6,24 @@ import './PodcastContainer.css';
 import usePersistedState from "../components/usePersistedState";
 import PodcastList from "../components/PodcastList";
 
-const PodcastContainer = ({ isLogin, setIsLogin }) => {
 
+const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) => {
+
+
+    // handle login button in the navbar
+    // if there is user logged in, when click 'log out'
+    // set isLogin 'false', set currentp odcast account empty {}
+    const handleLogin = (event) => {
+        event.preventDefault();
+        
+        if(isLogin && currentPodCastAcc.length !=0){
+            setIsLogin(!isLogin);
+            setCurrentPodCastAcc({});
+            console.log(isLogin);
+            return;
+        }
+        
+    }
     
     return (
         <div className="nav-bar">
@@ -16,7 +32,7 @@ const PodcastContainer = ({ isLogin, setIsLogin }) => {
                 <li><Link to='/explore'>Explore</Link></li>
                 <li><Link to='/pricing'>Pricing</Link></li>
                 <li><Link to='/account'><button>{isLogin ? "Account" : "Sign Up"}</button></Link></li>
-                <li><Link to='/login'><button>Login</button></Link></li>
+                <li><Link to='/login'><button onClick={handleLogin}>{isLogin ? "Logout" : "Login"}</button></Link></li>
             </ul>
         </div>
     );
