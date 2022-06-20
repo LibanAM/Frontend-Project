@@ -1,5 +1,19 @@
 .sign-up-container{
     text-align: center;
-    height: 50%;
-    width: 50%;
+    
+    padding: 150px;
+}
+
+
+.sign-up-form{
+    
+    text-align: center;
+    height: 600px;
+    width: 500px;
+    border: solid #81e2a8 2px;
+}
+
+/* task: remove the stupid bullet points (mini-rage)*/
+.other-sign-up{
+    list-style: none;
 }

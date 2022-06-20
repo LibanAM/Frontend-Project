@@ -94,14 +94,16 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
 
     return (
         <div className="sign-up-container">
-            <form>
-                <h1>SIGN UP WITH</h1>
+            <form className='sign-up-form'>
+                <h1 className='sign-up-title'>SIGN UP WITH</h1>
+                <div className='other-sign-up'>
                 <ul>
                     <li><a href="wwww.google.co.uk"><button><BsGoogle/></button></a></li>
                     <li><a href="wwww.twitter.com"><button><BsTwitter /></button></a></li>
                     <li><a href="wwww.linkedin.com"><button><FaLinkedinIn /></button></a></li>
                     <li><a href="wwww.github.com"><button><BsGithub /></button></a></li>
                 </ul>
+                </div>
                 <p className="or-line"><div> Or </div></p>
                 
                 <br/>

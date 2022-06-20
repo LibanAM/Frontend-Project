@@ -47,7 +47,7 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
     return(
 
         <div className="login-container">
-            <form>
+            <form className="login-form">
                 <h1>LOG IN WITH</h1>
                 <ul>
                     <li><a href="wwww.google.co.uk"><button><BsGoogle/></button></a></li>
