@@ -10,8 +10,8 @@ import usePersistedState from './components/usePersistedState';
 
 function App() {
   
-  const [isLogin, setIsLogin] = usePersistedState('isLogin', false);
-  const [currentAccount, setcurrentAccount] = usePersistedState('currentAccount', {});
+  const [isLogin, setIsLogin] = usePersistedState('isLogin',false);
+  const [currentAccount, setCurrentAccount] = usePersistedState('currentAccount',{});
 
   return (
     <Router>
@@ -25,7 +25,8 @@ function App() {
           <Route path='/account' element={<Account/>}></Route>
           <Route path='/login' element={<Login isLogin={isLogin} setIsLogin={setIsLogin}
                                                currentAccount={currentAccount}
-                                               setcurrentAccount={setcurrentAccount}/>}></Route>
+                                               setCurrentAccount={setCurrentAccount}/>}>
+          </Route>
         </Routes>
 
     </div>

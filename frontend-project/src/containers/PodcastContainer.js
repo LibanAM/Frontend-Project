@@ -17,6 +17,17 @@ const PodcastContainer = ({ isLogin, setIsLogin }) => {
             .then(data => setPodcasts(data))
     }, [])
 
+    const postPodcast = (newPodcast) => {
+        fetch('http://localhost:8080/podcasts',
+        {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(newPodcast)
+        })
+        .then(response => response.json())
+        .then(data => setPodcasts([...podcasts, data]))
+    }
+
 
 
     return (

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate} from "react-router-dom";
-import 
+import {BsGoogle, BsTwitter, BsGithub} from 'react-icons/bs';
+import {FaLinkedinIn} from 'react-icons/fa';
 
 const Login = ({isLogin, setIsLogin, currentAccount, setCurrentAccount}) =>{
 
@@ -25,10 +26,11 @@ const Login = ({isLogin, setIsLogin, currentAccount, setCurrentAccount}) =>{
                 <h2>LOG IN WITH</h2>
                 <ul>
                     <li><a href="wwww.google.co.uk"><button><BsGoogle/></button></a></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li><a href="wwww.twitter.com"><button><BsTwitter /></button></a></li>
+                    <li><a href="wwww.linkedin.com"><button><FaLinkedinIn /></button></a></li>
+                    <li><a href="wwww.github.com"><button><BsGithub /></button></a></li>
                 </ul>
+                <p><div>Or</div></p>
                 
             </form>
 
