@@ -17,7 +17,8 @@ import java.time.LocalDate;
 import java.util.Arrays;
 
 @Component
-public class DataLoader implements ApplicationRunner {
+public class
+DataLoader implements ApplicationRunner {
 
     @Autowired
     private PodcastRepository podcastRepository;
