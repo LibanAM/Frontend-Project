@@ -2,7 +2,7 @@ import {BsGoogle, BsTwitter, BsGithub} from 'react-icons/bs';
 import {FaLinkedinIn} from 'react-icons/fa';
 import {AiOutlineEyeInvisible, AiOutlineEye} from 'react-icons/ai';
 import {useRef, useEffect, useState} from 'react';
-import weakPassword from '../images/Frame 1242.png';
+import weakPassword from '../images/Frame_1242_(1).png';
 import lessStrongPassword from '../images/Frame 1243.png';
 import strongPassword from '../images/Frame 1244.png';
 import './SignUp.css';
@@ -26,6 +26,9 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
     const handleSignUp = (event) => {
         event.preventDefault();
 
+        if(!handleExisitedUserName() || !handleCorrectEmail() || !handlePasswordChecker()) return;
+
+
         const newPodcastUser = {
             username: inputNewUsername.current.value,
             password: inputNewPassword.current.value,
@@ -47,6 +50,7 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
 
     // check if the username already exists
     const handleExisitedUserName = () => {
+        let isUserNameOk = false;
         const allUserNames = allUsers.map(user => {return user.username;});
         
         if(allUserNames.includes(inputNewUsername.current.value)){
@@ -54,21 +58,29 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
         }
         else{
             document.querySelector('.new-user-username-input').innerHTML="";
+            isUserNameOk = true;
         }
+        return isUserNameOk;
+
     }
 
     // check if it is the right format of email address
     const handleCorrectEmail = () => {
+        let isUserEmailOk = false;
+
         if(!inputNewEmail.current.value.includes("@")){
-            document.querySelector('.new-user-email-input').innerHTML="Please put in correct email"
+            document.querySelector('.new-user-email-input').innerHTML="Please put in the correct email"
         }
         else{
-            document.querySelector('.new-user-email-input').innerHTML=""
+            document.querySelector('.new-user-email-input').innerHTML="";
+            isUserEmailOk = true;
         }
     }
 
     // check if the password is strong enough or not
     const handlePasswordChecker = () => {
+        let isUserPasswordOk = false;
+
         const specialSymbol = ['!', '?', '@', '.', '_', '/', '#', '$', '(', ')', '^', '%',
                                '*', ':', ';', '+'];
 
@@ -81,6 +93,7 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
         }
         else {
             document.querySelector('.new-user-password-input').innerHTML=`<img src=${strongPassword} alt="weak password"/>`;
+            isUserPasswordOk = true;
         }
     }
 
@@ -98,34 +111,34 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
                 <h1 className='sign-up-title'>SIGN UP WITH</h1>
                 <div className='other-sign-up'>
                 <ul>
-                    <li><a href="wwww.google.co.uk"><button><BsGoogle/></button></a></li>
-                    <li><a href="wwww.twitter.com"><button><BsTwitter /></button></a></li>
-                    <li><a href="wwww.linkedin.com"><button><FaLinkedinIn /></button></a></li>
-                    <li><a href="wwww.github.com"><button><BsGithub /></button></a></li>
+                    <li><a href="wwww.twitter.com" className="button-a-tag"><button className="other-sign-up-button-twitter"><BsTwitter className="other-sign-up-icons-twitter"/></button></a></li>
+                    <li><a href="wwww.google.co.uk" className="button-a-tag"><button className="other-sign-up-button-google"><BsGoogle className="other-sign-up-icons-google"/></button></a></li>
+                    <li><a href="wwww.linkedin.com" className="button-a-tag"><button className="other-sign-up-button-linkedin"><FaLinkedinIn className="other-sign-up-icons-linkedin"/></button></a></li>
+                    <li><a href="wwww.github.com" className="button-a-tag"><button className="other-sign-up-button-github"><BsGithub className="other-sign-up-icons-github"/></button></a></li>
                 </ul>
                 </div>
-                <p className="or-line"><div> Or </div></p>
+                <p className="or-line"><span> Or </span></p>
                 
                 <br/>
-                <p>Your username</p>
-                <input type="text" ref={inputNewUsername} onChange={handleExisitedUserName}/>
+                <p className="sign-up-input-title">Your username</p>
+                <input type="text" ref={inputNewUsername} onChange={handleExisitedUserName} className="sign-up-input-box"/>
                 <p className='new-user-username-input'></p>
 
-                <p>Your Email</p>
-                <input type="text" ref={inputNewEmail} onChange={handleCorrectEmail}/>
+                <p className="sign-up-input-title">Your Email</p>
+                <input type="text" ref={inputNewEmail} onChange={handleCorrectEmail} className="sign-up-input-box"/>
                 <p className='new-user-email-input'></p>
 
-                <p>Password</p>
-                <input  type={passwordShown? "text" : "password"} ref={inputNewPassword} onChange={handlePasswordChecker}/><br/>
-                <button onClick={handlePasswordShown}>{passwordShown? <AiOutlineEye/> : <AiOutlineEyeInvisible/> }</button>
+                <p className="sign-up-input-title">Password</p>
+                <input  type={passwordShown? "text" : "password"} ref={inputNewPassword} onChange={handlePasswordChecker} className="sign-up-input-box"/><br/>
+                <button onClick={handlePasswordShown} className="password-shown-button">{passwordShown? <AiOutlineEye className="password-eye"/> : <AiOutlineEyeInvisible className="password-eye"/> }</button>
                 <p className='new-user-password-input'></p>
                 <br/>
                 <input type="checkbox" id='sign-up-condition-box' className='sign-up-terms-box'/>
-                <label htmlFor="sign-up-condition-box">I agree to terms & condictions.</label>
+                <label htmlFor="sign-up-condition-box" >I agree to terms & condictions.</label>
                 <br/>
-                <button onClick={handleSignUp} id="sign-up-btn">Sign up</button>
+                <button onClick={handleSignUp} className='sign-up-btn'>Sign up</button>
 
-                <p>Do you already have an account?<a href="/login">Log in</a></p>
+                <p>Do you already have an account? <a href="/login">Log in</a></p>
 
             </form>
 

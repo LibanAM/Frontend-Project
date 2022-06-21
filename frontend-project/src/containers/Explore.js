@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import NewPodcast from "../components/NewPodcast";
 import PodcastList from "../components/PodcastList";
+import EpisodeList from "../components/EpisodeList";
+import './Explore.css'
 
 
 
@@ -27,12 +29,13 @@ const Explore = () => {
             .then(data => setPodcasts([...podcasts, data]))
     }
 
-    const deletePodcast= (id)=> {
-        fetch('http://localhost:8080/podcasts' + id, {
-            method:"DELETE",
-            headers:{"Content-Type": "application/json"}
+    const deletePodcast= (id) => {
+        fetch('http://localhost:8080/podcasts/' + id, 
+        {
+            method: "DELETE",
+            headers:{ 'Content-Type' : 'application/json' }
         })
-        setPodcasts(podcasts.filter(podcast => podcast.id != podcast))
+        setPodcasts(podcasts.filter(podcast => podcast.id !== id))
     }
 
     // Adding and removing episodes
@@ -64,11 +67,36 @@ const Explore = () => {
         setEpisodes(episodes.filter(episode => episode.id != episode))
     }
 
+    const [episodeList, setEpisodeList] = useState([])
+
+    const showEpisode = (id) => {
+        let foundPodcasts = podcasts.filter(podcast => podcast.id == id);
+        // console.log(podcasts)
+        // console.log(id)
+        let foundPodcast = foundPodcasts[0];
+        let foundEpisodes = foundPodcast.podcastEpisodes;
+        // episodeList = []
+        setEpisodeList([]);
+        console.log(foundEpisodes)
+        // for(let i = 0; i < foundEpisodes.length; i++){
+        //     let episodesFiltered = foundEpisodes[i]
+        //     console.log(episodesFiltered)
+        //     episodeList.push(episodesFiltered)
+
+        // }
+        // console.log(episodeList)
+
+
+    }
+
     return (
         <>
             <h2>Explore</h2>
+            <PodcastList podcasts={podcasts} deletePodcast={deletePodcast} showEpisode={showEpisode}/>
+            <EpisodeList episodes={episodes} deleteEpisode={deleteEpisode} showEpisode={episodeList}/>
             <NewPodcast postPodcast={postPodcast}/>
-            <PodcastList podcasts={podcasts} deletePodcast={deletePodcast} />
+
+            
 
         </>
     );

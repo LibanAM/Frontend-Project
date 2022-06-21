@@ -1,4 +1,5 @@
 import './App.css';
+import './containers/SignUp.css';
 import PodcastContainer from './containers/PodcastContainer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Explore from './containers/Explore';
@@ -8,6 +9,7 @@ import Login from './containers/Login';
 import SignUp from './containers/SignUp';
 import Home from './containers/Home';
 import usePersistedState from './components/usePersistedState';
+
 
 function App() {
   

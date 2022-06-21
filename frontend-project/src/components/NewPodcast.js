@@ -34,17 +34,11 @@ const NewPodcast = ({ postPodcast }) => {
                 name="title"
                 onChange={handleChange}
                 value={statePodcast.title} />
-            {/* <input type="text"
+            <input type="text"
                 placeholder="Podcast content note"
                 name="contentNote"
                 onChange={handleChange}
-                value={statePodcast.contentNote} /> */}
-                <select size={3} multiple>
-                    <option>N/A</option>
-                    <option>Gambling</option>
-                    <option>Violence</option>
-                    <option>Death</option>
-                </select>
+                value={statePodcast.contentNote} />
             <input type="text"
                 placeholder="Podcast description"
                 name="description"

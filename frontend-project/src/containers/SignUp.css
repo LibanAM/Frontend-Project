@@ -1,19 +1,326 @@
+/* Login and SignUp CSS */
+
+
 .sign-up-container{
-    text-align: center;
-    
-    padding: 150px;
+    display: flex;
+    justify-content: center;
+    background-color:#816AFE;
+    padding-bottom: 200px;
+    font-family: 'Red Hat Mono', monospace;
+    color:rgb(97, 97, 97);
+
+    background-image: url(../images/Group_1198.png);
+    background-repeat: no-repeat;
+    background-position-x:left;
+    background-position-y: 55%;
 }
 
 
 .sign-up-form{
-    
+    background-color:white;
+    margin-top:100px;
+    /* text-align: center; */
+    min-height: 500px;
+    max-width:400px;
+    border: solid #81e2a8 8px;
+    border-radius:10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.sign-up-title{
     text-align: center;
-    height: 600px;
-    width: 500px;
-    border: solid #81e2a8 2px;
+    color: #816AFE;
+    font-family: 'Red Hat Mono', monospace;
+}
+
+.other-sign-up{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 /* task: remove the stupid bullet points (mini-rage)*/
-.other-sign-up{
+/* alter -- kim (yay Kim! :D)*/
+.other-sign-up > ul {
+    
+    margin-top:0;
+    margin-bottom:20px;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+    position: relative;
+    right:3%;
 }
+
+.other-sign-up > ul > li {
+    display: flex;
+    margin-right:20px;
+    margin-left:0;
+    
+}
+
+.other-sign-up-button {
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    border-radius: 5px;
+     /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+}
+
+
+.other-sign-up-icons{
+    font-size:30px;
+    color:#816AFE;
+    margin: 5px 2px;
+}
+
+/* LINKEDIN BUTTON */
+.other-sign-up-icons-linkedin{
+    font-size:30px;
+    margin: 5px 2px;
+    color:#816AFE;
+}
+
+/*try to delete the back corner --fail*/
+/* Kim is a legend /(^-^/) */
+.button-a-tag:hover{    
+    background-color:transparent;
+    
+}
+
+.other-sign-up-button-linkedin{
+border-style: none;
+border: 0;
+border-color:transparent; 
+border-radius: 5px;
+/* shadow */
+-webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+-moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+box-shadow: 0 8px 6px -6px rgb(126, 126, 126)
+}
+
+.other-sign-up-button-linkedin:hover{
+border-style: none;
+border: 0;
+border-color:transparent; 
+background-color: #007bb5;
+color:white;
+border-radius: 5px;
+
+}
+
+.other-sign-up-icons-linkedin:hover{
+    background-color:#007bb5;
+    color: white;
+    text-decoration:none;
+    /* border-radius: 5px; */
+}
+
+/* GITHUB BUTTON  */
+
+.other-sign-up-icons-github{
+    font-size:30px;
+    margin: 5px 2px;
+    color:#816AFE;
+}
+
+.other-sign-up-button-github{
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    border-radius: 5px;
+    /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    box-shadow: 0 8px 6px -6px rgb(126, 126, 126)
+}
+    
+.other-sign-up-button-github:hover{
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    background-color: black;
+    color:white;
+    border-radius: 5px;
+    
+}
+
+.other-sign-up-icons-github:hover{
+    background-color:black;
+    color: white;
+    text-decoration:none;
+    /* border-radius: 5px; */
+}
+
+/* TWITTER BUTTON  */
+
+.other-sign-up-icons-twitter{
+    font-size:30px;
+    margin: 5px 2px;
+    color:#816AFE;
+}
+
+.other-sign-up-button-twitter{
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    border-radius: 5px;
+    /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    box-shadow: 0 8px 6px -6px rgb(126, 126, 126)
+}
+    
+.other-sign-up-button-twitter:hover{
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    background-color: #55ACEE;
+    color:white;
+    border-radius: 5px;
+    
+}
+
+.other-sign-up-icons-twitter:hover{
+    background-color:#55ACEE;
+    color: white;
+    text-decoration:none;
+    /* border-radius: 5px; */
+}
+
+/* GOOGLE BUTTON  */
+
+.other-sign-up-icons-google{
+    font-size:30px;
+    margin: 5px 2px;
+    color:#816AFE;
+}
+
+.other-sign-up-button-google{
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    border-radius: 5px;
+    /* shadow */
+    -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
+    box-shadow: 0 8px 6px -6px rgb(126, 126, 126)
+}
+    
+.other-sign-up-button-google:hover{
+    border-style: none;
+    border: 0;
+    border-color:transparent; 
+    background-color: #dd4b39;
+    color:white;
+    border-radius: 5px;
+    
+}
+
+.other-sign-up-icons-google:hover{
+    background-color:#dd4b39;
+    color: white;
+    text-decoration:none;
+    /* border-radius: 5px; */
+}
+
+
+
+/* .other-sign-up-icons:hover{
+opacity: 0.7;
+} */
+
+
+.or-line{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #816AFE; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ }
+
+ .or-line > span {
+    color:#816AFE;
+    font-weight: 600;
+    background:white;
+    padding: 0 10px;
+    font-family: 'Red Hat Mono', monospace;
+ }
+
+
+ .sign-up-input-title{
+    font-family: 'Red Hat Mono', monospace;
+    color: gray;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
+ }
+
+ .sign-up-input-box{
+    border-style: solid;
+    padding: 10px;
+    height:25px;
+    width: 330px;
+    border-radius: 5px;
+    border-color: rgb(167, 167, 167);
+    border-width: 1px;
+    margin-bottom: 0;
+ }
+
+ .password-shown-button{
+    border-style: none;
+    background-color:transparent;
+    position: relative;
+    left:85%;
+    bottom: 5.5%;
+ }
+
+ .password-eye{
+    font-size: 25px;
+    font-weight: bold;
+    color:#81e2a8;
+ }
+
+ .new-user-password-input{
+    margin-top:0;
+    padding-top:0;
+ }
+ 
+/* terms tick box */
+.sign-up-terms-box{
+    border-radius: 20px;
+}
+
+
+/* sign up button */
+
+.sign-up-btn{
+    margin-top:10px;
+    height: 40px;
+    width: 250px;
+
+    text-align: center;
+    position: relative;
+    left: 14%;
+
+    border-radius: 20px;
+    border-style: solid;
+    border-color:#816AFE;
+    background-color:transparent;
+    color: #816AFE;
+    font-size: 18px;
+
+}
+
+.other-links{
+    text-align: center;
+}
+
+
+
+

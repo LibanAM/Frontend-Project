@@ -1,15 +1,32 @@
-const Podcast = ({podcast, deletePodcast}) => {
+import EpisodeList from './EpisodeList.js'
 
-    return(
-        <div>
-            <h3>{podcast.title}</h3>
-            <p>Title: {podcast.title}</p>
-            <p>Content note: {podcast.contentNote}</p>
-            <p>Description: {podcast.description}</p>
-            <p>Rating: {podcast.rating}/5</p>
-            {/* <p>{podcast.podcastEpisodes}</p> */}
-        </div>
-    );
-}
+const Podcast = ({ podcast, deletePodcast, showEpisode }) => {
+  
+  const handleDeletePodcast = () => {
+    deletePodcast(podcast.id);
+  };
+
+  const handleShowEpisodes = () => {
+    showEpisode(podcast.id)
+    
+  }
+
+  return (
+    <div>
+      <ul>
+        <h3>{podcast.title}</h3>
+        <li>Content note: {podcast.contentNote}</li>
+        <li>Category: {podcast.category}</li>
+        <li>Description: {podcast.description}</li>
+        <li>Rating: {podcast.rating}/5</li>
+        {/* <p>{podcast.podcastEpisodes}</p> */}
+        {/* <EpisodeList/> */}
+        <button onClick={handleDeletePodcast}>Delete</button>
+        <button onClick={handleShowEpisodes}>Episodes</button>
+
+      </ul>
+    </div>
+  );
+};
 
 export default Podcast;

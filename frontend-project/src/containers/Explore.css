@@ -1,0 +1,14 @@
+.podcast {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    background-color: #816afe;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+
+.podcast > ul > li {
+ padding: 5px 0px; 
+}
+
