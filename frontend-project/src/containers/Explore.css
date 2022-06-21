@@ -4,11 +4,16 @@
     background-color: #816afe;
     padding: 5px;
     margin: 5px;
-
 }
-
 
 .podcast > ul > li {
- padding: 5px 0px; 
+padding: 5px 0px;
 }
 
+/* Ideas for page layout:
+1. add pictures with each podcast ~ maybe have pictures that turn
+over to reveal info
+2. scroll function for searching podcasts
+3. remodel buttons 
+2. remove bullet points 
+4. instead of pictures make each podcast have their own outline */

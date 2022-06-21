@@ -71,10 +71,10 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                 <p className='new-user-password-input'></p>
                 <br/>
 
-                <a href="#" className="other-links">Log in as Admin?</a>
+                <a href="#" className="link-a-tag">Log in as Admin?</a>
                 <br/>
 
-                <a href="#" className="other-links">Forget your password?</a>
+                <a href="#" className="link-a-tag">Forget your password?</a>
                 <br/>
 
                 <div>
@@ -83,7 +83,7 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
                 <button onClick={handleLogin} className='sign-up-btn'>Log in</button>
                 </div>
                 <p>Do you need an account?
-                    <a href="/account">Create new account</a></p>
+                    <a href="/account" className="link-a-tag">Create new account</a></p>
             </form>
 
         </div>

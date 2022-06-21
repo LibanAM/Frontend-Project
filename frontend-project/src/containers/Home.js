@@ -60,8 +60,8 @@ const Home = () => {
               animi dolore voluptates.
             </p>
             <div id="Download-images">
-              <img src={AppStore} alt="Download on the App Store" />
-              <img src={GooglePlay} alt="Get it on Google Play" />
+              <img src={AppStore} alt="Download on the App Store" width="160" height="50"/>
+              <img src={GooglePlay} alt="Get it on Google Play" width="160" height="50"/>
             </div>
           </div>
 

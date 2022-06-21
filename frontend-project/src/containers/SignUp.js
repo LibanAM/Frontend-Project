@@ -14,7 +14,9 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
     const inputNewUsername = useRef();
     const [allUsers, setAllUsers] = useState();
     const [passwordShown, setPasswordShown] = useState(false);
+    const [allowedSignup, setAllowedSignup] = useState([false, false, false]);
 
+    console.log(allowedSignup);
     // get all users
     useEffect(()=>{
         fetch("http://localhost:8080/users")
@@ -26,8 +28,8 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
     const handleSignUp = (event) => {
         event.preventDefault();
 
-        if(!handleExisitedUserName() || !handleCorrectEmail() || !handlePasswordChecker()) return;
-
+        if(allowedSignup.includes(false)) return;
+        
 
         const newPodcastUser = {
             username: inputNewUsername.current.value,
@@ -50,36 +52,55 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
 
     // check if the username already exists
     const handleExisitedUserName = () => {
-        let isUserNameOk = false;
-        const allUserNames = allUsers.map(user => {return user.username;});
         
+        const allUserNames = allUsers.map(user => {return user.username;});
+        // initialise a checker, index 0
+        let userNameChecker = [false, allowedSignup[1], allowedSignup[2]];
+
         if(allUserNames.includes(inputNewUsername.current.value)){
             document.querySelector('.new-user-username-input').innerHTML="This username already exists";
+            
+            // didn't pass the username checker
+            setAllowedSignup(userNameChecker);
+
         }
         else{
             document.querySelector('.new-user-username-input').innerHTML="";
-            isUserNameOk = true;
+            
+            // pass username checker
+            userNameChecker = [true, allowedSignup[1], allowedSignup[2]];
+            setAllowedSignup(userNameChecker);
+
         }
-        return isUserNameOk;
 
     }
 
     // check if it is the right format of email address
     const handleCorrectEmail = () => {
-        let isUserEmailOk = false;
+        // initialise a checker, index 1
+        let userEmailChecker = [allowedSignup[0], false, allowedSignup[2]];
 
         if(!inputNewEmail.current.value.includes("@")){
             document.querySelector('.new-user-email-input').innerHTML="Please put in the correct email"
+            
+            // didn't pass the email checker
+            setAllowedSignup(userEmailChecker);
         }
         else{
             document.querySelector('.new-user-email-input').innerHTML="";
-            isUserEmailOk = true;
+
+            // pass email checker
+            userEmailChecker = [allowedSignup[0], true, allowedSignup[2]];
+            setAllowedSignup(userEmailChecker);
+           
         }
     }
 
     // check if the password is strong enough or not
     const handlePasswordChecker = () => {
-        let isUserPasswordOk = false;
+
+        // initialise a checker, index 2
+        let userPasswordChecker = [allowedSignup[0], allowedSignup[1], false];
 
         const specialSymbol = ['!', '?', '@', '.', '_', '/', '#', '$', '(', ')', '^', '%',
                                '*', ':', ';', '+'];
@@ -87,13 +108,23 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
         if(inputNewPassword.current.value=='1234' || inputNewPassword.current.value=='abc'
            || inputNewPassword.current.value.length < 8){
             document.querySelector('.new-user-password-input').innerHTML=`<img src=${weakPassword} alt="weak password"/>`;
+        
+            // didn't pass the password checker
+            setAllowedSignup(userPasswordChecker);
         }
         else if(specialSymbol.filter(s => inputNewPassword.current.value.includes(s)).length == 0){
-            document.querySelector('.new-user-password-input').innerHTML=`<img src=${lessStrongPassword} alt="weak password"/>`;
+            document.querySelector('.new-user-password-input').innerHTML=`<img src=${lessStrongPassword} alt="less strong password"/>`;
+        
+            // didn't pass the password checker
+            setAllowedSignup(userPasswordChecker);
         }
         else {
-            document.querySelector('.new-user-password-input').innerHTML=`<img src=${strongPassword} alt="weak password"/>`;
-            isUserPasswordOk = true;
+            document.querySelector('.new-user-password-input').innerHTML=`<img src=${strongPassword} alt="strong password"/>`;
+            
+            // pass password checker 
+            userPasswordChecker = [allowedSignup[0], allowedSignup[1], true];
+            setAllowedSignup(userPasswordChecker);
+
         }
     }
 
