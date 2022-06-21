@@ -26,7 +26,13 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
     }
     
     return (
-        <div className="nav-bar">
+        // was <div> -> <nav>
+        <nav className="nav-bar">
+            {/* <a>
+                <div>
+                <img s a="images"lt="JustListen logo"></img>
+                </div>
+            </a> */}
             <ul className="nar-ul">
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/explore'>Explore</Link></li>
@@ -34,7 +40,7 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                 <li><Link to='/account'><button>{isLogin ? "Account" : "Sign Up"}</button></Link></li>
                 <li><Link to='/login'><button onClick={handleLogin}>{isLogin ? "Logout" : "Login"}</button></Link></li>
             </ul>
-        </div>
+        </nav>
     );
 }
 

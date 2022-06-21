@@ -10,6 +10,34 @@
 padding: 5px 0px;
 }
 
+#pop-up{
+    position: absolute;
+    top: -1000;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: #FFF;
+}
+
+.pop-up-inner #close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+
+
 /* Ideas for page layout:
 1. add pictures with each podcast ~ maybe have pictures that turn
 over to reveal info

@@ -1,31 +1,18 @@
-const Episode = ({episode, deleteEpisode}) => {
-    
-    // const perEpisode = () => {
-    //     for(let i = 0; i <= episode.length; i++){
-            
-    //         <>
-    //         <div>
-    //             <h3>{episode[i].name}</h3>
-    //             <p>Description: {episode[i].description}</p>
-    //             <p>Duration: {episode[i].duration}</p>
-    //             {/* <p>Contributors: {episode.contributors.name}</p> */}
-    //         </div>
-    //         </> 
-    //     }
-    // }
+import "../containers/Explore.css";
 
-
-    return(
-        <>
-        <div>
-            <h3>{episode.name}</h3>
-            <p>Description: {episode.description}</p>
-            <p>Duration: {episode.duration}</p>
-            {/* <p>Contributors: {episode.contributors.name}</p>  */}
-        </div>
-        {/* {perEpisode} */}
-        </>
-    );
-}
+const Episode = ({ episode, deleteEpisode }) => {
+  return (
+    <>
+      <div class="pop-up">
+        <ul class="pop-up-inner">
+          <h3>{episode.name}</h3>
+          <li>Description: {episode.description}</li>
+          <li>Duration: {episode.duration}</li>
+          {/* <p>Contributors: {episode.contributors.name}</p>  */}
+        </ul>
+      </div>
+    </>
+  );
+};
 
 export default Episode;

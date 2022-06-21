@@ -1,24 +1,34 @@
 
-
-.nar-ul{
-    list-style: none;
+/* to show that we have an actual nav bar - clearer */
+.nav-bar > ul{
+    background-color: #816AFE;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
     display: flex;
-    justify-content: space-around;
-    background-color: #646fd4;
-    padding: 0;
-    margin: 0;
+    align-items: center;
+    box-shadow:0 8px 6px -6px rgb(126, 126, 126);
+}
+/* add logo to the nav bar */
 
-    
+.nar-ul {
+    list-style: none;
+    display: inline;
+    justify-content: space-evenly;
+    margin: 10px;
 }
 
-div > ul > li > a{
+
+nav > ul > li > a{
     color: black;
     text-decoration: none;
 
 
 }
 
-div > ul > li > a:hover {
+nav > ul > li > a:hover {
     background-color: black;
     color: white;
 

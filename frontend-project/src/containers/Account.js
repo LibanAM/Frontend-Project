@@ -6,6 +6,9 @@ const Account = ({currentPodCastAcc}) => {
 
     return(
         <div className="account-container">
+            <br/>
+            <br/>
+            <br/>
             <h2><div>Welcome back {currentPodCastAcc.username}!</div></h2>
             <ul>
                 <li><Link to='/account/recommended'>Recommended Podcasts</Link></li>
@@ -19,13 +22,13 @@ const Account = ({currentPodCastAcc}) => {
                 <h2><Link to={{pathname:'/explore', hash:'#explore-bot'}}>More categories</Link></h2>
                 
                 <ul>
-                    <li><div><Link to="/explore">Comedy</Link></div></li>
-                    <li><div><Link to="/explore">Family</Link></div></li>
-                    <li><div><Link to="/explore">Factual</Link></div></li>
-                    <li><div><Link to="/explore">Sports</Link></div></li>
-                    <li><div><Link to="/explore">Business</Link></div></li>
-                    <li><div><Link to="/explore">health</Link></div></li>
-                    <li><div><Link to="/explore">True Crime</Link></div></li>
+                    <li><div><a href="/explore/Comedy">Comedy</a></div></li>
+                    <li><div><Link to="/explore/Family">Family</Link></div></li>
+                    <li><div><Link to="/explore/Factual">Factual</Link></div></li>
+                    <li><div><Link to="/explore/Sports">Sports</Link></div></li>
+                    <li><div><Link to="/explore/Business">Business</Link></div></li>
+                    <li><div><Link to="/explore/Health">Health</Link></div></li>
+                    <li><div><Link to="/explore/TrueCrime">True Crime</Link></div></li>
                     <li><div><Link to="/explore">Others</Link></div></li>
 
                 </ul>

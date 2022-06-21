@@ -98,11 +98,11 @@
 border-style: none;
 border: 0;
 border-color:transparent; 
-border-radius: 5px;
+border-radius: 50px;
 /* shadow */
 -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
 -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
-box-shadow: 0 8px 6px -6px rgb(126, 126, 126)
+box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
 }
 
 .other-sign-up-button-linkedin:hover{
@@ -111,7 +111,7 @@ border: 0;
 border-color:transparent; 
 background-color: #007bb5;
 color:white;
-border-radius: 5px;
+border-radius: 50px;
 
 }
 
@@ -134,7 +134,7 @@ border-radius: 5px;
     border-style: none;
     border: 0;
     border-color:transparent; 
-    border-radius: 5px;
+    border-radius: 50px;
     /* shadow */
     -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
     -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
@@ -147,7 +147,7 @@ border-radius: 5px;
     border-color:transparent; 
     background-color: black;
     color:white;
-    border-radius: 5px;
+    border-radius: 50px;
     
 }
 
@@ -170,7 +170,7 @@ border-radius: 5px;
     border-style: none;
     border: 0;
     border-color:transparent; 
-    border-radius: 5px;
+    border-radius: 50px;
     /* shadow */
     -webkit-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
     -moz-box-shadow: 0 8px 6px -6px rgb(126, 126, 126);
@@ -183,7 +183,7 @@ border-radius: 5px;
     border-color:transparent; 
     background-color: #55ACEE;
     color:white;
-    border-radius: 5px;
+    border-radius: 50px;
     
 }
 
@@ -219,7 +219,7 @@ border-radius: 5px;
     border-color:transparent; 
     background-color: #dd4b39;
     color:white;
-    border-radius: 5px;
+    border-radius: 50px;
 }
 
 .other-sign-up-icons-google:hover{

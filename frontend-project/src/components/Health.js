@@ -2,7 +2,7 @@ const Health = () => {
 
     return (
         <>
-        <h1>Hello from Family</h1>
+        <h1>Hello from Health</h1>
         </>
     );
 }

@@ -3,6 +3,7 @@ import NewPodcast from "../components/NewPodcast";
 import PodcastList from "../components/PodcastList";
 import EpisodeList from "../components/EpisodeList";
 import "./Explore.css";
+import {Link, Outlet} from 'react-router-dom';
 
 const Explore = () => {
   //  adding and removing podcasts
@@ -89,19 +90,40 @@ const Explore = () => {
   return (
     <>
       <h2>Explore</h2>
+      
       <PodcastList
         podcasts={podcasts}
         deletePodcast={deletePodcast}
         showEpisode={showEpisode}
       />
+        
       <EpisodeList
         episodes={episodes}
         deleteEpisode={deleteEpisode}
         showEpisode={episodeList}
       />
+
+      
+
+      {/* catagories display list */}
+      <div className="explore-categories">
+        <h2>Explore by categories</h2>
+        <ul>
+          <li><Link to='/explore/comedy'>Comedy</Link></li>
+          <li><Link to='/explore/Family'>Family</Link></li>
+          <li><Link to='/explore/Factual'>Factual</Link></li>
+          <li><Link to='/explore/Sport'>Sports</Link></li>
+          <li><Link to='/explore/Business'>Business</Link></li>
+          <li><Link to='/explore/Health'>Health</Link></li>
+          <li><Link to='/explore/TrueCrime'>True Crime</Link></li>
+        </ul>
+
+        <Outlet />
+      </div>
+
       <NewPodcast postPodcast={postPodcast} />
 
-      <section id="explore-bot">hi</section>
+      
     </>
   );
 };

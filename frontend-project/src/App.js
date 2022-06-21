@@ -36,14 +36,15 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/explore' element={<Explore/>}>
-            <Route path='Comedy' element={<Comedy/>}/>
+            <Route path='comedy' element={<Comedy/>}/>
+            <Route path='Family' element={<Family/>}/>
             <Route path='Business' element={<Business/>}/>
             <Route path='Factual' element={<Factual/>}/>
             <Route path='Sport' element={<Sport/>}/>
             <Route path='TrueCrime' element={<TrueCrime/>}/>
             <Route path='Health' element={<Health/>}/>
 
-            </Route>
+          </Route>
             
           <Route path='/pricing' element={<Pricing/>}></Route>
 

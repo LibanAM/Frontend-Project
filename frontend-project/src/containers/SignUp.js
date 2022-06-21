@@ -165,7 +165,7 @@ const SignUp = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) 
                 <p className='new-user-password-input'></p>
                 <br/>
                 <input type="checkbox" id='sign-up-condition-box' className='sign-up-terms-box'/>
-                <label htmlFor="sign-up-condition-box" >I agree to terms & condictions.</label>
+                <label htmlFor="sign-up-condition-box" >I agree to terms & conditions.</label>
                 <br/>
                 <button onClick={handleSignUp} className='sign-up-btn'>Sign up</button>
 

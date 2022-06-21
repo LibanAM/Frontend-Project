@@ -45,6 +45,11 @@ public class UserController {
             userToUpdate.setUsername(user.getUsername());
             userToUpdate.setEmail(user.getEmail());
             userToUpdate.setAdmin(user.getAdmin());
+
+            // new added :
+            userToUpdate.setWatchedEpisodes(user.getWatchedEpisodes());
+            userToUpdate.setRecommendedPodcasts(user.getRecommendedPodcasts());
+
             userRepository.save(userToUpdate);
             return new ResponseEntity<>(userRepository.findById(id), HttpStatus.OK);
         }
