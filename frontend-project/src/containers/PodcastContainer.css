@@ -1,7 +1,7 @@
 
-/* to show that we have an actual nav bar - clearer */
+/* to show that we have an actual nav bar - clearer -- find another colour for nav bar */
 .nav-bar > ul{
-    background-color: #816AFE;
+    background-color: #b0b7fa;
     position: fixed;
     top: 0;
     left: 0;
