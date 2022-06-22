@@ -42,10 +42,12 @@ const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
     return(
         <div className="account-container">
-            <br/>
-            <br/>
-            <br/>
-            <h2><div>Welcome back {currentPodCastAcc.username}!</div></h2>
+            <div className="welcomeback-title">
+                <ul className="welcome-back-div">
+                    <li>Welcome back&nbsp;</li>
+                    <li className="user-name">&nbsp;{currentPodCastAcc.username}&nbsp;</li>
+                </ul>
+            </div>
             <ul>
                 <li>
                     <Link to='/account/recommended'>Today's Recommended Podcasts For you</Link>
@@ -58,10 +60,11 @@ const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
 
             <div className="more-categories-container">
-                <h2 className="categories-title">
-                    <Link to={{pathname:'/explore', hash:'#explore-categories'}} className="more-categories-title">More categories
+                <div className="categories-title">
+                    <Link to={{pathname:'/explore', hash:'#explore-categories'}} className="more-categories-link">
+                        MORE CATEGORIES
                     </Link>
-                </h2>
+                </div>
                 
                 <ul className="categories-ul">
                     <li>

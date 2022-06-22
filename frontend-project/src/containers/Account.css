@@ -1,5 +1,37 @@
+
 .account-container{
-    font-family: 'Roboto', sans-serif;
+    background-image: url(../images/Group_1180.png);
+    background-repeat: no-repeat;
+    background-position-x:90%;
+    background-position-y: 10%;
+    
+}
+
+.welcomeback-title{
+
+    padding-top:50px;
+
+    margin-left:100px;
+    margin-right:100px;
+    background-color:transparent;
+    color:rgb(34, 34, 34);
+    font-weight:900;
+    font-size:30px;
+}
+
+.welcome-back-div{
+    list-style-type:none;
+    display: flex;
+    justify-content: left;
+    padding-left: 0;
+}
+
+.user-name{
+    color:#81e2a8;
+    background-color:#816AFE;
+    border-radius:5px;
+
+
 }
 
 
@@ -15,23 +47,54 @@
 
 
 
+
+
+
+
+
+/* more categories part styling */
 
 .more-categories-container{
     margin-top:50px;
     margin-bottom:50px;
     margin-left: 100px;
     margin-right: 100px;
+    text-align: center;
 
 }
 
 .categories-title{
     background-color:white;
+    text-align: center;
+    
+    
 }
 
-.more-categories-title{
+/* try for fancy title */
+
+
+
+
+/* --------------------- */
+
+
+
+.more-categories-link{
     text-decoration: none;
     background-color:transparent;
+    padding-bottom: 0;
+    font-weight:800;
+    font-size: 40px;
+    
+
+    color:#816AFE;
 }
+
+.more-categories-link:hover{
+    text-align: center;
+    color:#81e2a8;
+}
+
 
 .categories-ul{
     list-style: none;
@@ -52,8 +115,9 @@
 .categories-link{
     text-decoration: none;
     font-weight:700;
-    color:rgb(255, 255, 255);
+    /* color:rgb(255, 255, 255); */
     opacity:1;
+    
     font-size:30px;
 
 }
