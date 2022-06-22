@@ -9,7 +9,7 @@
     height: 80px;
     display: flex;
     align-items: center;
-    box-shadow:0 8px 6px -6px rgb(126, 126, 126);
+    /* box-shadow:0 8px 6px -6px rgb(126, 126, 126); */
 }
 /* add logo to the nav bar */
 
