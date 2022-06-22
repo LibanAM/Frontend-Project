@@ -87,3 +87,25 @@ nav > ul > li > a:hover {
         display: block;
     }
 } */
+
+/* Search bar */
+
+#search-bar-box{
+    border-style: solid;
+    padding: 10px;
+    height:15px;
+    width:200px;
+    border-radius: 5px;
+    border-color: rgb(167, 167, 167);
+    border-width: 1px;
+    margin-bottom: 0;
+    background-color: #f1f1f1;
+}
+
+/* #search-bar > a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 10px;
+} */

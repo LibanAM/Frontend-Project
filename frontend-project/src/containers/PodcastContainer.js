@@ -38,13 +38,16 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                 <li><Link to='/home'>Home</Link></li>
                 <li><Link to='/explore'>Explore</Link></li>
                 {/* <li><Link to='/pricing'>Pricing</Link></li> */}
-                <div className="dropdown">
+            <div className="dropdown">
                 <button className="dropbtn"> Account</button>
                 <div className="dropdown-content" styleleft="left:0">
                     <a><Link to='/account'>{isLogin ? "Account" : "Sign Up"}</Link></a>
                     <a><Link to='/login'>{isLogin ? "Logout" : "Login"}</Link></a>
                 </div>
-                </div>
+            </div>
+            <div id="search-bar">
+            <input type="text" placeholder="Search for your podcast..." id="search-bar-box"></input>
+            </div>
 
                 {/* alternative code for drop down -- amber */}
                 {/* <li>
