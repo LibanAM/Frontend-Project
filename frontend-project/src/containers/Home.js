@@ -18,7 +18,7 @@ const Home = () => {
           <p id="one-liner-pt1">Our podcasts are better</p>
           <p id="one-liner-pt2">than our web design</p>
           <div id="home-btn">
-          <button id="home-page-btn">Start listening for free</button>
+          <Link to='/explore'><button id="home-page-btn">Start listening for free</button></Link>
           </div>
         </div>
 
