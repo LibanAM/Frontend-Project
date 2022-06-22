@@ -41,10 +41,11 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                 <button className="dropbtn"> Account</button>
                 <div className="dropdown-content" styleleft="left:0">
                     <a><Link to='/account'>{isLogin ? "Account" : "Sign Up"}</Link></a>
-                    <a href="#">Link B</a>
-                    <a href="#">Link C</a>
+                    <a><Link to='/login'>{isLogin ? "Logout" : "Login"}</Link></a>
                 </div>
                 </div>
+                
+                {/* alternative code for drop down -- amber */}
                 {/* <li>
                     <a className="nav-dropdown" href="#" role="button" data-bs-toggle="dropdown">Account</a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -52,8 +53,10 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                         <li><a className="dropdown-item" href="#">Another action</a></li>
                     </ul>
                 </li> */}
-                <li><Link to='/account'><button>{isLogin ? "Account" : "Sign Up"}</button></Link></li>
-                <li><Link to='/login'><button onClick={handleLogin}>{isLogin ? "Logout" : "Login"}</button></Link></li>
+
+                {/* orginal signing in link code -- amber  */}
+                {/* <li><Link to='/account'><button>{isLogin ? "Account" : "Sign Up"}</button></Link></li>
+                <li><Link to='/login'><button onClick={handleLogin}>{isLogin ? "Logout" : "Login"}</button></Link></li> */}
             </ul>
         </nav>
     );
