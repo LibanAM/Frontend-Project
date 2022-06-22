@@ -1,14 +1,17 @@
 import Episode from "./Episode";
 
-const EpisodeList = ({ deleteEpisode, showEpisode }) =>{
+const EpisodeList = ({ deleteEpisode, showEpisode, togglePopup }) => {
 
-    const episodesComponents = showEpisode.map((episode, index) =>{
-            return <Episode key = {index} episode = {episode} deleteEpisode={deleteEpisode} />
-        })
+    const episodesComponents = showEpisode.map((episode, index) => {
+        return <Episode key={index} 
+        episode={episode} 
+        deleteEpisode={deleteEpisode} 
+        togglePopup={togglePopup} />
+    })
 
-    return(
+    return (
         <>
-        {episodesComponents}
+            {episodesComponents}
         </>
     );
 }

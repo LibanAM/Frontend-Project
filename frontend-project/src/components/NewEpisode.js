@@ -1,22 +1,35 @@
 import { useState } from "react";
 
-const NewEpisode = ({postEpisode}) =>{
+const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
 
-    const [stateEpisode, setStateEpisode] = useState (
+    const [stateEpisode, setStateEpisode] = useState(
         {
             name: "",
-            description:"",
+            description: "",
             duration: "",
-            datePosted: "",
-            podcast: null
+            datePosted: Date,
+            podcast: null,
+            // contributors: ""
         }
     )
+
+    const podcastOptions = podcasts.map((podcast, index) => {
+        return <option key={index} value={podcast.id}>{podcast.title}</option>
+    })
 
     const handleChange = (event) => {
         console.log(event);
         let propertyName = event.target.name;
-        let copiedEpisode = {...stateEpisode};
+        let copiedEpisode = { ...stateEpisode };
         copiedEpisode[propertyName] = event.target.value;
+        setStateEpisode(copiedEpisode)
+    }
+
+    const handlePodcast = (event) => {
+        const podcastId = parseInt(event.target.value);
+        const selectedPodcast = podcasts.find(podcast => podcast.id === podcastId);
+        let copiedEpisode = { ...stateEpisode }
+        copiedEpisode.podcast = selectedPodcast
         setStateEpisode(copiedEpisode)
     }
 
@@ -25,41 +38,49 @@ const NewEpisode = ({postEpisode}) =>{
         postEpisode(stateEpisode);
     }
 
-    return(
-        <form onSubmit={handleSubmit}>
-            <h3>Add a new episode: </h3>
-            <input 
-                type="text" 
-                placeholder="Episode Name"
-                name="name"
-                onChange={handleChange}
-                value={stateEpisode.name}
-                />
-            <input 
-                type="text" 
-                placeholder="Episode Description"
-                name="description"
-                onChange={handleChange}
-                value={stateEpisode.description}
-                />
+    return (
+        <div className="newForm">
+            <form onSubmit={handleFormSubmit}>
+                <h3>Add a new episode: </h3>
+                <input
+                    type="text"
+                    placeholder="Episode name"
+                    name="name"
+                    onChange={handleChange}
+                    value={stateEpisode.name}
+                    required />
+                <input
+                    type="text"
+                    placeholder="Episode description"
+                    name="description"
+                    onChange={handleChange}
+                    value={stateEpisode.description}
+                    required />
 
-            <input 
-                type="text" 
-                placeholder="Episode Duration"
-                name="duration"
-                onChange={handleChange}
-                value={stateEpisode.duration}
-                />
-            <input 
-                type="text" 
-                placeholder="Episode Posted"
-                name="datePosted"
-                onChange={handleChange}
-                value={stateEpisode.datePosted}
-                />
-            <select></select>
-            <button type="submit">Submit</button>
-        </form>
+                <input
+                    type="text"
+                    placeholder="Episode duration"
+                    name="duration"
+                    onChange={handleChange}
+                    value={stateEpisode.duration}
+                    required />
+                <input
+                    type="Date"
+                    placeholder="Episode posted"
+                    name="datePosted"
+                    onChange={handleChange}
+                    value={stateEpisode.datePosted}
+                    required />
+
+                <select name="podcast"
+                    onChange={handlePodcast}
+                    required>
+                    <option value="">Select a podcast</option>
+                    {podcastOptions}
+                </select>
+                <button type="submit" className="submit-btn">Submit</button>
+            </form>
+        </div>
     );
 }
 
