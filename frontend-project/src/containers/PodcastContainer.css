@@ -1,15 +1,15 @@
 
 /* to show that we have an actual nav bar - clearer -- find another colour for nav bar */
 .nav-bar > ul{
-    background-color: #b0b7fa;
-    position: fixed;
-    top: 0;
+    background-color: #816AFE;
+    /* position: fixed; */
+    /* top: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     height: 80px;
     display: flex;
     align-items: center;
-    box-shadow:0 8px 6px -6px rgb(126, 126, 126);
+    /* box-shadow:0 8px 6px -6px rgb(126, 126, 126); */
 }
 /* add logo to the nav bar */
 
@@ -17,19 +17,95 @@
     list-style: none;
     display: inline;
     justify-content: space-evenly;
-    margin: 10px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 nav > ul > li > a{
-    color: black;
+    color: white;
     text-decoration: none;
-
-
+    /* font-family: 'Red Hat Mono', monospace; */
+    font-weight: 600;
+    font-size: medium;
 }
 
 nav > ul > li > a:hover {
-    background-color: black;
-    color: white;
+    color: #81e2a8;
+    border: solid; 
+    border-radius: 10%;
+    padding: 20px;
+    font-size: medium;
 
 }
+/* Drop down menu layout for Account */
+
+.dropbtn {
+    background-color: #816AFE;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    /* font-family: 'Red Hat Mono', monospace; */
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #81e2a8;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    /* font-family: 'Red Hat Mono', monospace; */
+    font-weight: 600;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1; color: #816AFE;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {color: #81e2a8; border: solid; border-radius: 10%; padding: 20px;}
+
+/* @media all and(max-width:768px){
+    nav .burger{
+        display: block;
+    }
+} */
+
+/* Search bar */
+
+#search-bar-box{
+    border-style: solid;
+    padding: 10px;
+    height:15px;
+    width:200px;
+    border-radius: 5px;
+    border-color: rgb(167, 167, 167);
+    border-width: 1px;
+    margin-bottom: 0;
+    background-color: #f1f1f1;
+}
+
+/* #search-bar > a{
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px 10px;
+} */

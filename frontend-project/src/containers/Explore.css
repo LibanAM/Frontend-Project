@@ -174,6 +174,27 @@
     font-weight: 600;
 }
 
+/* for the footer of the page -- amber */
+#section-3 {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#section-3-text-rhs {
+    padding: center;
+    border: solid;
+    border-radius: 25px;
+    border-color: #816AFE;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #816AFE;
+    color: white;
+    box-shadow:0px 3px 3px 3px rgb(186, 186, 186);
+}
 
 
 .podcast-btns {
@@ -184,10 +205,80 @@
     /* justify-items: center; */
     justify-content: space-evenly;
 }
-/* Ideas for page layout:
-1. add pictures with each podcast ~ maybe have pictures that turn
-over to reveal info
-2. scroll function for searching podcasts
-3. remodel buttons 
-2. remove bullet points 
-4. instead of pictures make each podcast have their own outline */
+
+.picture1{
+    padding-right: 4%;
+}
+
+div > #footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer > ul {
+    list-style: none;
+}
+
+#footer-left-side {
+    display: block;
+    padding-right: 10%;
+    padding-left: 5%;
+}
+
+.logo2{
+    padding-bottom: 10%;
+    padding-left: 5%;
+}
+
+.random-words{
+    padding-bottom: 5%;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.random-words2{
+    font-weight: 600;
+}
+
+.random-words3{
+    padding-top: 5%;
+}
+
+#Download-images{
+    padding-top: 5%;
+}
+
+#footer{
+    border: solid;
+    color: white;
+    background-color: #816AFE;
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+#Download-images {
+    display: flex;
+    justify-content: space-around;
+}
+
+  /* The extra information listed on the bottom-rhs */
+
+.extra-info{
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.extra-info > li > a{
+    color: white;
+    text-decoration: none;
+    }
+    
+    .extra-info > h3 {
+    color: #81e2a8;
+    }
+    
+    .extra-info > li > a:hover{
+    text-decoration: underline;
+    }
+>>>>>>> ab1
