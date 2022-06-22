@@ -13,10 +13,11 @@
     transition-duration: 0.5s; */
 
     background-color: #ac9eff;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .7) 100%);
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .1) 100%);
     background-repeat: no-repeat;
     background-size: 200% 100%;
-    transition: background-size 1s, background-color 1s;
+    color: black;
+    transition: background-size 1s, background-color 1s, color 0.5s;
 
 }
 
@@ -26,7 +27,7 @@
 
 .podcast>div {
     display: grid;
-    justify-items: center;
+    /* justify-items: center; */
     align-items: end;
     align-content: space-between;
 
@@ -254,10 +255,14 @@ div>#footer {
     padding-bottom: 5%;
     justify-content: center;
     font-weight: 600;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 0;
 }
 
 .random-words2 {
     font-weight: 600;
+    margin-top: 0;
 }
 
 .random-words3 {
@@ -300,4 +305,24 @@ div>#footer {
 
 .extra-info>li>a:hover {
     text-decoration: underline;
+}
+
+
+.explore-ul-category{
+    display: grid;
+    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+    justify-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+.explore-ul-category > li{
+    list-style-type: none;
+
+}
+
+.explore-ul-category > li > a {
+    justify-content: space-around;
+
+    
 }

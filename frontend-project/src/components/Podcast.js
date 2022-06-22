@@ -25,7 +25,7 @@ const Podcast = ({ podcast, deletePodcast, showEpisode }) => {
         <br />
 
         <label className="podcast-category">Podcast category: </label>
-        <li><Link to={`/explore/${podcast.category}`}> {podcast.category}</Link></li>
+        <li>{/*<Link to={`/explore/${podcast.category}`}>*/} {podcast.category}{/*</Link>*/}</li>
         <br />
 
         <label className="podcast-rating">Podcast rating: </label>

@@ -11,7 +11,7 @@ import picture from "../images/logo603x186.png";
 import GooglePlay from "../images/GooglePlay.png";
 import AppStore from "../images/AppStore.png";
 
-const Explore = () => {
+const Explore = ({isLogin, currentPodCastAcc}) => {
   //  adding and removing podcasts
 
   const [podcasts, setPodcasts] = useState([]);
@@ -96,10 +96,20 @@ const Explore = () => {
     }
   };
 
-  const closePopup = (arg) => {
+  const closePopup = () => {
     setIsOpen(false);
   }
 
+  const [isAdmin, setIsAdmin] = useState(currentPodCastAcc.admin);
+  
+  // const userIsAdmin = () => {
+  //   console.log(currentPodCastAcc.admin);
+  //   if (isLogin && currentPodCastAcc.admin == true) {
+  //     setIsAdmin(true)
+  //   } 
+  // }
+
+  // userIsAdmin();
 
 
 
@@ -131,8 +141,8 @@ const Explore = () => {
       {/* catagories display list */}
       <div className="explore-categories" id="explore-categories">
         <h2>Explore by categories</h2>
-        <ul>
-          <li><Link to='/explore/comedy'>Comedy</Link></li>
+        <ul className="explore-ul-category">
+          <li><Link to='/explore/Comedy'>Comedy</Link></li>
           <li><Link to='/explore/Family'>Family</Link></li>
           <li><Link to='/explore/Factual'>Factual</Link></li>
           <li><Link to='/explore/Sport'>Sports</Link></li>
@@ -145,10 +155,10 @@ const Explore = () => {
       </div>
 
 
-      <div id="forms">
+      {isAdmin && <div id="forms">
         <NewPodcast postPodcast={postPodcast} />
         <NewEpisode postEpisode={postEpisode} podcasts={podcasts} />
-      </div>
+      </div>}
 
       {/* adding a footer to the page -- amber */}
       <footer id="footer">
