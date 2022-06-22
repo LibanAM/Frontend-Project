@@ -2,22 +2,24 @@ import { Link } from "react-router-dom";
 import usePersistedState from "./usePersistedState";
 import {useEffect, useState} from "react";
 import {IoMdHeartDislike} from 'react-icons/io';
+import PopupEpisodes from "./PopupEpisodes";
+
+
 const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     
-    // useEffect(() => {
-    //     fetch("http://localhost:8080/users/" + currentPodCastAcc.id)
-    //     .then(response => response.json())
-    //     .then(data => setCurrentPodCastAcc(data))
-    // },[])
+
 
     const date = new Date();
     const [recommendList, setRecommendList] = usePersistedState('recommendList', currentPodCastAcc.recommendedPodcasts);
+    const [currentPodcast, setCurrentPodcast] = usePersistedState('currentPodcast',[]);
 
+
+    // for pop up window for the episodes
+    const [isOpen, setIsOpen] = usePersistedState('isOpen', false);
 
     // dislike the recommended podcast
     const handleDislikeRPodcast = (id) => {
         
-
         // update backend database
         fetch(`http://localhost:8080/users/deleterec/${currentPodCastAcc.id}/${id}`, {
             method: "DELETE",
@@ -41,8 +43,13 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
 
     // show episodes of the recommended podcast
-    const handleShowEpisodes = () => {
-        
+    const handlePopup = (id) => {
+        if(!isOpen){
+            fetch("http://localhost:8080/podcasts/" + id)
+            .then(response => response.json())
+            .then(data => setCurrentPodcast(data))
+        }
+        setIsOpen(!isOpen);
     }
 
 
@@ -57,8 +64,13 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
                         <li>Description: {p.description}</li>
                         <li>Rating: {p.rating}/5</li>
                     </ul>
-                <button onClick={() =>handleDislikeRPodcast(p.id)}><IoMdHeartDislike/></button>
-                <button onClick={handleShowEpisodes}>Episodes</button>
+                <button onClick={() => handleDislikeRPodcast(p.id)}><IoMdHeartDislike/></button>
+                <button onClick={() => handlePopup(p.id)}>Episodes</button>
+                
+                {isOpen && <PopupEpisodes content={currentPodcast} 
+                                          handleClose={handlePopup}
+                                          currentPodCastAcc={currentPodCastAcc}
+                                          setCurrentPodCastAcc={setCurrentPodCastAcc} />}
 
             </div>
         );

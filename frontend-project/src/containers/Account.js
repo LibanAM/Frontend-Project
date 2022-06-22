@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
 import {HashLink} from 'react-router-hash-link';
-import RecommendedPodcasts from '../components/RecommendList';
+
 import { useNavigate } from 'react-router-dom';
+import './Account.css';
+
 
 const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
@@ -41,18 +43,24 @@ const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
             <br/>
             <h2><div>Welcome back {currentPodCastAcc.username}!</div></h2>
             <ul>
-                <li><Link to='/account/recommended' onClick={handleGetRecommended}>Today's Recommended Podcasts For you </Link></li>
+                <li>
+                    <Link to='/account/recommended'>Today's Recommended Podcasts For you</Link>
+                    <button onClick={handleGetRecommended} className="showmore-recommendation-button">show more</button>
+                </li>
                 <li><Link to='/account/watched'>Watched Episodes</Link></li>
             </ul>
 
             <Outlet />
 
 
-            <div>
-                <h2><Link to={{pathname:'/explore', hash:'#explore-categories'}}>More categories</Link></h2>
+            <div className="more-categories-container">
+                <h2 className="categories-title">
+                    <Link to={{pathname:'/explore', hash:'#explore-categories'}} className="more-categories-title">More categories
+                    </Link>
+                </h2>
                 
-                <ul>
-                    <li><div><a href="/explore/Comedy">Comedy</a></div></li>
+                <ul className="categories-ul">
+                    <li><div className="category-comedy"><a href="/explore/Comedy">Comedy</a></div></li>
                     <li><div><Link to="/explore/Family">Family</Link></div></li>
                     <li><div><Link to="/explore/Factual">Factual</Link></div></li>
                     <li><div><Link to="/explore/Sports">Sports</Link></div></li>

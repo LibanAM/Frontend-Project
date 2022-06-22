@@ -1,0 +1,47 @@
+.account-container{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.more-categories-container{
+    margin-top:50px;
+    margin-bottom:50px;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.categories-title{
+    background-color:white;
+}
+
+.more-categories-title{
+    text-decoration: none;
+    background-color:transparent;
+}
+
+.categories-ul{
+    list-style: none;
+    display:flex;
+    justify-content: left;
+}
+
+.category-comedy{
+
+    height:200px;
+    width:200px;
+    background-image:URL("https://source.unsplash.com/random/100×100");
+}

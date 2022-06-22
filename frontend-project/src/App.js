@@ -57,9 +57,11 @@ function App() {
                                                    <SignUp isLogin={isLogin} setIsLogin={setIsLogin}
                                                            currentPodCastAcc={currentPodCastAcc}
                                                            setCurrentPodCastAcc={setCurrentPodCastAcc} />}>
+
                 <Route path='recommended' element={<RecommendList currentPodCastAcc={currentPodCastAcc} 
                                                                   setCurrentPodCastAcc={setCurrentPodCastAcc}/>} />
-                <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}/>}/>
+                <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}
+                                                                   setCurrentPodCastAcc={setCurrentPodCastAcc}/>}/>
 
           </Route>
 
