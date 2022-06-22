@@ -31,8 +31,8 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
         <nav className="nav-bar">
             <ul className="nar-ul">
             <div className="nav-logo">
-                <a className="logo-there" href="./"/>
-                <span className="resize"> <img src={picture} alt="JustListenAPI logo" width={150} height={50}/></span>
+                <a className="logo-there" />
+                <span className="resize"> <Link to='/'><img src={picture} alt="JustListenAPI logo" width={150} height={50}/></Link></span>
             </div>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/explore'>Explore</Link></li>
@@ -44,7 +44,7 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                     <a><Link to='/login'>{isLogin ? "Logout" : "Login"}</Link></a>
                 </div>
                 </div>
-                
+
                 {/* alternative code for drop down -- amber */}
                 {/* <li>
                     <a className="nav-dropdown" href="#" role="button" data-bs-toggle="dropdown">Account</a>
