@@ -1,40 +1,83 @@
 import { Link } from "react-router-dom";
 import usePersistedState from "./usePersistedState";
 import {useEffect, useState} from "react";
-
-const RecommendList = ({currentPodCastAcc}) => {
+import {IoMdHeartDislike} from 'react-icons/io';
+const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     
-    // randomly show 4 recommended podcasts from the database
-    const [allPodcasts, setAllPodcasts] = useState([]);
-    
+    // useEffect(() => {
+    //     fetch("http://localhost:8080/users/" + currentPodCastAcc.id)
+    //     .then(response => response.json())
+    //     .then(data => setCurrentPodCastAcc(data))
+    // },[])
 
-    // get all the podcasts
-    useEffect(()=> {
-        fetch("http://localhost:8080/podcasts")
-        .then(response => response.json())
-        .then(data => setAllPodcasts(data))
-    }, [])
+    const date = new Date();
+    const [recommendList, setRecommendList] = usePersistedState('recommendList', currentPodCastAcc.recommendedPodcasts);
 
-    const randomRecommendPodcasts = [];
-    
-    for (let i=0; i < 4; i++){
-        let chosenIndex = Math.floor(Math.random() * 7) ;
-        randomRecommendPodcasts.push(allPodcasts[chosenIndex]);
+
+    // dislike the recommended podcast
+    const handleDislikeRPodcast = (id) => {
+        
+
+        // update backend database
+        fetch(`http://localhost:8080/users/deleterec/${currentPodCastAcc.id}/${id}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" }
+        })
+
+        // update front end hooks
+        const updatedAcc = {
+            id:currentPodCastAcc.id,
+            username:currentPodCastAcc.username,
+            password:currentPodCastAcc.password,
+            email:currentPodCastAcc.email,
+            watchedEpisodes:currentPodCastAcc.watchedEpisodes,
+            recommendedPodcasts:currentPodCastAcc.recommendedPodcasts.filter(p => p.id != id),
+            admin:currentPodCastAcc.admin
+        }
+
+        setCurrentPodCastAcc(updatedAcc);
+
     }
 
-    const [recommendList, setRecommendList] = usePersistedState('recommendList', randomRecommendPodcasts);
 
-    
+    // show episodes of the recommended podcast
+    const handleShowEpisodes = () => {
+        
+    }
 
+
+    const rListMap = currentPodCastAcc.recommendedPodcasts.map(p => {
+        return (
+            <div className="single-podcast">
+                
+                <h3>{p.title}</h3>
+                    <ul>
+                        <li>Content note: {p.contentNote}</li>
+                        <li>Category: {p.category}</li>
+                        <li>Description: {p.description}</li>
+                        <li>Rating: {p.rating}/5</li>
+                    </ul>
+                <button onClick={() =>handleDislikeRPodcast(p.id)}><IoMdHeartDislike/></button>
+                <button onClick={handleShowEpisodes}>Episodes</button>
+
+            </div>
+        );
+    })
+        
+   
 
 
 
     return (
-        <>
-            <p>hi</p>
-            <p>hi from recommended podcasts</p>
-            <p>show something</p>
-        </>
+        <div className="recommended-container">
+            <h3>{date.toLocaleDateString()}</h3>
+            <div className="recommend-list">
+                
+                {rListMap}
+                
+            </div>
+            
+        </div>
     );
 }
 

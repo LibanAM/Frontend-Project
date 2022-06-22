@@ -106,7 +106,7 @@ const Explore = () => {
       
 
       {/* catagories display list */}
-      <div className="explore-categories">
+      <div className="explore-categories" id="explore-categories">
         <h2>Explore by categories</h2>
         <ul>
           <li><Link to='/explore/comedy'>Comedy</Link></li>

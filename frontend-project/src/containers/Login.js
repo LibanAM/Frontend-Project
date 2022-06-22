@@ -25,12 +25,14 @@ const Login = ({isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) =
         
         const currentUser = allUsers.filter(user => user.email == inputEmail.current.value &&
                                                     user.password == inputPassword.current.value);
+
+        
         if (currentUser.length == 0) {
             alert("Invalid email adress or password! Please try again!")
             return
         };
 
-        setCurrentPodCastAcc(currentUser);
+        setCurrentPodCastAcc(currentUser[0]);
         setIsLogin(!isLogin);
         navigate('/explore');
 
