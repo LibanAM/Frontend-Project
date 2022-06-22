@@ -35,7 +35,7 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                 <span className="resize"> <Link to='/'><img src={picture} alt="JustListenAPI logo" width={150} height={50}/></Link></span>
             </div>
                 <li><Link to='/'>Cover</Link></li>
-                <li><Link to='/'>Home</Link></li>
+                <li><Link to='/home'>Home</Link></li>
                 <li><Link to='/explore'>Explore</Link></li>
                 {/* <li><Link to='/pricing'>Pricing</Link></li> */}
                 <div className="dropdown">

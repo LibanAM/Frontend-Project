@@ -2,6 +2,7 @@ import './App.css';
 import './containers/SignUp.css';
 import PodcastContainer from './containers/PodcastContainer';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Cover from './containers/Cover';
 import Explore from './containers/Explore';
 import Pricing from './containers/Pricing';
 import Account from './containers/Account';
@@ -34,7 +35,8 @@ function App() {
                           currentPodCastAcc={currentPodCastAcc}
                           setCurrentPodCastAcc={setCurrentPodCastAcc} />
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
+          <Route path='/home' element={<Home/>}></Route>
+          <Route path='/' element={<Cover/>}/>
           <Route path='/explore' element={<Explore/>}>
             <Route path='comedy' element={<Comedy/>}/>
             <Route path='Family' element={<Family/>}/>
@@ -49,17 +51,17 @@ function App() {
           <Route path='/pricing' element={<Pricing/>}></Route>
 
           <Route path='/account' element={isLogin? <Account currentPodCastAcc={currentPodCastAcc}/>: 
-                                                   <SignUp isLogin={isLogin} setIsLogin={setIsLogin}
-                                                           currentPodCastAcc={currentPodCastAcc}
-                                                           setCurrentPodCastAcc={setCurrentPodCastAcc} />}>
+                                                  <SignUp isLogin={isLogin} setIsLogin={setIsLogin}
+                                                          currentPodCastAcc={currentPodCastAcc}
+                                                          setCurrentPodCastAcc={setCurrentPodCastAcc} />}>
                 <Route path='recommended' element={<RecommendList />} currentPodCastAcc={currentPodCastAcc}/>
                 <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}/>}/>
 
           </Route>
 
           <Route path='/login' element={<Login isLogin={isLogin} setIsLogin={setIsLogin}
-                                               currentPodCastAcc={currentPodCastAcc}
-                                               setCurrentPodCastAcc={setCurrentPodCastAcc}/>}>
+                                              currentPodCastAcc={currentPodCastAcc}
+                                              setCurrentPodCastAcc={setCurrentPodCastAcc}/>}>
           </Route>
         </Routes>
 
