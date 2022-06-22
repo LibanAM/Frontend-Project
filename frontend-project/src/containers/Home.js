@@ -17,7 +17,9 @@ const Home = () => {
           </div> */}
           <p id="one-liner-pt1">Our podcasts are better</p>
           <p id="one-liner-pt2">than our web design</p>
+          <div id="home-btn">
           <button id="home-page-btn">Start listening for free</button>
+          </div>
         </div>
 
         <div id="section-2">
@@ -35,10 +37,13 @@ const Home = () => {
             <img src={Artwork2} alt="Line podcast artwork" />
           </div>
           <div id="section-3-text-rhs">
-            <h3>Listen</h3>
-            <h4>EVERYWHERE</h4>
+            <h3>Listen EVERYWHERE</h3>
             <p>
               Et omnis aut id. Aut eaque est quaerat. Doloribus omnis fugit et
+              sit ducimus expedita. Et iure minima enim est earum voluptas
+              occaecati. Connect with all your devices like Alexa, Google Home
+              or your car.</p> <br/>
+              <p> Et omnis aut id. Aut eaque est quaerat. Doloribus omnis fugit et
               sit ducimus expedita. Et iure minima enim est earum voluptas
               occaecati. Connect with all your devices like Alexa, Google Home
               or your car.</p>
