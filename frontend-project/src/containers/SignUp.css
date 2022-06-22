@@ -283,8 +283,9 @@ opacity: 0.7;
  .password-eye{
     font-size: 25px;
     font-weight: bold;
-    color:#81e2a8;
+    color:#816AFE;
  }
+
 
  .new-user-password-input{
     margin-top:0;
@@ -314,6 +315,12 @@ opacity: 0.7;
     background-color:transparent;
     color: #816AFE;
     font-size: 18px;
+}
+
+.sign-up-btn:hover{
+    background-color: #816AFE;
+    color: white;
+    cursor: pointer;
 }
 
 /* attempting to add 'memory' to pressing link --failed: page refreshing won't resort colour */
