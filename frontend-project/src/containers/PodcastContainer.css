@@ -2,10 +2,10 @@
 /* to show that we have an actual nav bar - clearer -- find another colour for nav bar */
 .nav-bar > ul{
     background-color: #b0b7fa;
-    position: fixed;
-    top: 0;
+    /* position: fixed; */
+    /* top: 0;
     left: 0;
-    right: 0;
+    right: 0; */
     height: 80px;
     display: flex;
     align-items: center;
@@ -17,7 +17,7 @@
     list-style: none;
     display: inline;
     justify-content: space-evenly;
-    margin: 10px;
+    margin: 0;
 }
 
 

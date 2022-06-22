@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './PodcastContainer.css';
 import usePersistedState from "../components/usePersistedState";
 import PodcastList from "../components/PodcastList";
+import picture from "../images/logo603x186.png";
 
 
 const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPodCastAcc}) => {
@@ -28,12 +29,11 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
     return (
         // was <div> -> <nav>
         <nav className="nav-bar">
-            {/* <a>
-                <div>
-                <img s a="images"lt="JustListen logo"></img>
-                </div>
-            </a> */}
             <ul className="nar-ul">
+            <div className="nav-logo">
+                <a className="logo-there" href="./"/>
+                <span className="resize"> <img src={picture} alt="JustListenAPI logo" width={150} height={50}/></span>
+            </div>
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/explore'>Explore</Link></li>
                 <li><Link to='/pricing'>Pricing</Link></li>

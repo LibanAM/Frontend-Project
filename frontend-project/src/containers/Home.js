@@ -11,9 +11,9 @@ const Home = () => {
       {/* <h2>Home</h2> */}
       <div id="gradient-1">
         <div id="section-1">
-          <div className="logo">
+          {/* <div className="logo">
             <img src={picture} alt="JustListenAPI logo" />
-          </div>
+          </div> */}
           <p id="one-liner-pt1">Our podcasts are better</p>
           <p id="one-liner-pt2">than our web design</p>
           <button id="home-page-btn">Start listening for free</button>
