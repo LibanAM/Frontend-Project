@@ -1,5 +1,6 @@
 import Episode from './Episode.js'
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
+import '../containers/Explore.css'
 
 
 const Podcast = ({ podcast, deletePodcast, showEpisode }) => {
@@ -12,8 +13,6 @@ const Podcast = ({ podcast, deletePodcast, showEpisode }) => {
     showEpisode(podcast.id)
   }
 
-
-
   return (
     <div>
       <ul>
@@ -22,7 +21,7 @@ const Podcast = ({ podcast, deletePodcast, showEpisode }) => {
         <li>Category: <Link to={`/explore/${podcast.category}`}> {podcast.category}</Link></li>
         <li>Description: {podcast.description}</li>
         <li>Rating: {podcast.rating}/5</li>
-        <button onClick={handleDeletePodcast}>Delete</button>
+        <button onClick={handleDeletePodcast} className="delete-btn">Delete</button>
         <button onClick={handleShowEpisodes}>Episodes</button>
 
       </ul>
