@@ -15,30 +15,32 @@ const Podcast = ({ podcast, deletePodcast, showEpisode }) => {
 
   return (
     <div>
-        <h3 id="podcast-title">{podcast.title}</h3>
+      <h3 id="podcast-title">{podcast.title}</h3>
       <ul className="podcast-ul">
         <label className="podcast-desc">Description: </label>
         <li>{podcast.description}</li>
-        <br/>
+        <br />
         <label className="podcast-contentNote">Content note: </label>
         <li>{podcast.contentNote}</li>
-        <br/>
+        <br />
 
         <label className="podcast-category">Podcast category: </label>
         <li><Link to={`/explore/${podcast.category}`}> {podcast.category}</Link></li>
-        <br/>
+        <br />
 
         <label className="podcast-rating">Podcast rating: </label>
         <li>{podcast.rating}/5</li>
-        <br/>
+        <br />
 
         <label className="podcast-sources">Podcast sources: </label>
         <li>{podcast.sources}</li>
-        <br/>
+        <br />
 
       </ul>
-      <button onClick={handleDeletePodcast} id="delete-btn" className="podcast-btns">Delete</button>
-      <button onClick={handleShowEpisodes} className="podcast-btns">Episodes</button>
+      <div className="podcast-btns">
+        <button onClick={handleDeletePodcast} id="delete-btn" >Delete</button>
+        <button onClick={handleShowEpisodes}>Episodes</button>
+      </div>
     </div>
   );
 };

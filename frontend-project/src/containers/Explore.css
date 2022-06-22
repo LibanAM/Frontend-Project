@@ -4,6 +4,7 @@
     background-color: #816afe;
     padding: 5px;
     margin: 5px;
+    position: relative;
 
 }
 
@@ -15,6 +16,17 @@
 
 .podcast>ul>li {
     padding: 5px 0px;
+}
+
+.podcast > div {
+    display: grid;
+    justify-items: center;
+    align-items: end;
+    align-content: space-between;
+}
+
+.podcast > div > h3{
+    display: grid;
 }
 
 #episodePopup {
@@ -166,7 +178,11 @@
 
 .podcast-btns {
     display: flex;
-    flex-direction: row;
+    /* grid-template-columns: 50% 50%; */
+    /* bottom: 0px; */
+    /* position: relative; */
+    /* justify-items: center; */
+    justify-content: space-evenly;
 }
 /* Ideas for page layout:
 1. add pictures with each podcast ~ maybe have pictures that turn
