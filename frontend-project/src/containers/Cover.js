@@ -1,6 +1,7 @@
 import picture from "../images/logo603x186.png";
 import dancing from "../images/dancing.png";
 import "./Cover.css";
+import { Link } from 'react-router-dom';
 
 const Cover = ()=>{
     return( 
@@ -15,7 +16,7 @@ const Cover = ()=>{
     <div className="text-cover">
     <p id="one-liner-cover-1">OUR PODCASTS ARE BETTER</p>
     <p id="one-liner-cover-2">THAN OUR WEB DESIGN</p>
-        <button id="cover-button">Start listening for free</button>
+    <Link to='/explore'><button id="cover-button">Start listening for free</button></Link>
     </div>
 
         <div className="dancing-man">
