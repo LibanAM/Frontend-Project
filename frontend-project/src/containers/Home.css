@@ -25,10 +25,12 @@ h2 {
 #section-3-text-rhs {
   padding: center;
   border: solid;
+  border-radius: 25px;
   padding-left: 5%;
   padding-right: 5%;
   background-color: #816AFE;
   color: white;
+  
 }
 
 div > #footer {
