@@ -1,5 +1,5 @@
 import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router-dom';
-import {HashLink} from 'react-router-hash-link';
+// import {HashLink} from 'react-router-hash-link';
 import RecommendedPodcasts from '../components/RecommendList';
 
 const Account = ({currentPodCastAcc}) => {
