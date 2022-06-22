@@ -17,7 +17,7 @@ const Episode = ({ episode, deleteEpisode }) => {
           <li>Description: {episode.description}</li>
           <li>Duration: {episode.duration} minutes</li>
           <li>Date Posted: {episode.datePosted}</li>
-          <button onClick={handleDelete} className="delete-btn">Delete Episode</button>
+          <button onClick={handleDelete} id="delete-btn">Delete Episode</button>
         </ul>
       </div>
     </>

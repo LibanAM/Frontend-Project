@@ -4,10 +4,17 @@
     background-color: #816afe;
     padding: 5px;
     margin: 5px;
+
 }
 
-.podcast > ul > li {
-padding: 5px 0px;
+.podcast > div:hover {
+    background-color: #04AA6D;
+    transition-duration: 0.5s;
+
+}
+
+.podcast>ul>li {
+    padding: 5px 0px;
 }
 
 #episodePopup {
@@ -16,7 +23,7 @@ padding: 5px 0px;
     height: 120vh;
 }
 
-.episodes{
+.episodes {
     display: grid;
     justify-items: center;
     position: absolute;
@@ -42,6 +49,7 @@ padding: 5px 0px;
     display: grid;
     grid-template-columns: auto;
 }
+
 .btn-close {
     cursor: pointer;
     border: 1px solid #999;
@@ -52,26 +60,114 @@ padding: 5px 0px;
     z-index: 100;
 }
 
-.delete-btn {
+#delete-btn {
     width: fit-content;
     height: fit-content;
     border-radius: 2px;
-    transition-duration: 0.9s;
+    transition-duration: 0.5s;
     font-weight: 400;
 }
 
-.delete-btn:hover {
+#delete-btn:hover {
     background-color: #ba1414;
     color: white;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-    
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
 }
 
-.delete-btn:active{
+#delete-btn:active {
     transform: translateY(4px);
 }
 
+#podcast-desc {
+    font-weight: 40;
+}
 
+.newForm>form {
+    display: grid;
+}
+
+.newForm>form>input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+
+}
+
+.newForm>form>select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.newform>form>button {
+    width: 50%;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#forms {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.submit-btn {
+    width: 50%;
+}
+
+#podcast-title {
+    padding: 0;
+}
+
+.podcast-ul {
+    padding: 0;
+}
+
+.podcast-ul > li {
+    list-style: none;
+}
+
+.podcast-desc {
+    font-weight: 600;
+}
+
+.podcast-contentNote {
+    font-weight: 600;
+}
+
+.podcast-category {
+    font-weight: 600;
+}
+
+.podcast-rating {
+    font-weight: 600;
+}
+
+.podcast-sources {
+    font-weight: 600;
+}
+
+
+
+.podcast-btns {
+    display: flex;
+    flex-direction: row;
+}
 /* Ideas for page layout:
 1. add pictures with each podcast ~ maybe have pictures that turn
 over to reveal info

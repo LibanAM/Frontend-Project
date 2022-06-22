@@ -65,6 +65,7 @@ const Explore = () => {
     });
     setEpisodes(episodes.filter((episode) => episode.id != episode));
     window.location.reload(true);
+
   };
 
 
@@ -140,10 +141,11 @@ const Explore = () => {
 
         <Outlet />
       </div>
-
+      
+      <div id="forms">
       <NewPodcast postPodcast={postPodcast} />
       <NewEpisode postEpisode={postEpisode} podcasts={podcasts} />
-
+      </div>
 
     </>
   );

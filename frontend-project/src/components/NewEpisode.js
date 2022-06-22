@@ -39,45 +39,48 @@ const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
     }
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <h3>Add a new episode: </h3>
-            <input
-                type="text"
-                placeholder="Episode Name"
-                name="name"
-                onChange={handleChange}
-                value={stateEpisode.name}
-            />
-            <input
-                type="text"
-                placeholder="Episode Description"
-                name="description"
-                onChange={handleChange}
-                value={stateEpisode.description}
-            />
+        <div className="newForm">
+            <form onSubmit={handleFormSubmit}>
+                <h3>Add a new episode: </h3>
+                <input
+                    type="text"
+                    placeholder="Episode name"
+                    name="name"
+                    onChange={handleChange}
+                    value={stateEpisode.name}
+                    required />
+                <input
+                    type="text"
+                    placeholder="Episode description"
+                    name="description"
+                    onChange={handleChange}
+                    value={stateEpisode.description}
+                    required />
 
-            <input
-                type="text"
-                placeholder="Episode Duration"
-                name="duration"
-                onChange={handleChange}
-                value={stateEpisode.duration}
-            />
-            <input
-                type="text"
-                placeholder="Episode Posted"
-                name="datePosted"
-                onChange={handleChange}
-                value={stateEpisode.datePosted}
-            />
-            
-            <select name="podcast"
-                onChange={handlePodcast}>
-                <option>Select a podcast</option>
-                {podcastOptions}
-            </select>
-            <button type="submit">Submit</button>
-        </form>
+                <input
+                    type="text"
+                    placeholder="Episode duration"
+                    name="duration"
+                    onChange={handleChange}
+                    value={stateEpisode.duration}
+                    required />
+                <input
+                    type="Date"
+                    placeholder="Episode posted"
+                    name="datePosted"
+                    onChange={handleChange}
+                    value={stateEpisode.datePosted}
+                    required />
+
+                <select name="podcast"
+                    onChange={handlePodcast}
+                    required>
+                    <option value="">Select a podcast</option>
+                    {podcastOptions}
+                </select>
+                <button type="submit" className="submit-btn">Submit</button>
+            </form>
+        </div>
     );
 }
 
