@@ -11,7 +11,7 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
     const date = new Date();
     const [recommendList, setRecommendList] = usePersistedState('recommendList', currentPodCastAcc.recommendedPodcasts);
-    const [currentPodcast, setCurrentPodcast] = usePersistedState('currentPodcast',[]);
+    const [currentPodcast, setCurrentPodcast] = usePersistedState('currentPodcast', []);
 
 
     // for pop up window for the episodes
