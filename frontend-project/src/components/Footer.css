@@ -1,0 +1,137 @@
+
+div > #footer {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #footer > ul {
+    list-style: none;
+  }
+  
+  #footer-left-side {
+    display: block;
+    padding-right: 10%;
+    padding-left: 5%;
+  }
+  
+  .logo2{
+    padding-bottom: 10%;
+    padding-left: 5%;
+  }
+  
+  .random-words{
+    padding-bottom: 5%;
+    justify-content: center;
+    font-weight: 600;
+  }
+  
+  .random-words2{
+    font-weight: 600;
+  }
+  
+  .random-words3{
+    padding-top: 5%;
+  }
+  
+  #Download-images{
+    padding-top: 5%;
+  }
+  
+  #footer{
+    border: solid;
+    color: white;
+    background-color: #816AFE;
+    /* padding: 10%; */
+    padding-top: 5%;
+    padding-bottom: 2%;
+  
+  }
+  
+  #Download-images {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* The extra information listed on the bottom-rhs */
+  
+  .extra-info{
+    padding-top: 10%;
+  }
+  
+  .extra-info > li > a{
+  color: white;
+  text-decoration: none;
+  }
+  
+  .extra-info > h3 {
+    color: #81e2a8;
+  }
+  
+  .extra-info > li > a:hover{
+    text-decoration: underline;
+  }
+  
+  #one-liner-pt1 {
+    font-size: 2rem;
+    color: #81e2a8;
+    font-weight: 800;
+    font-size: 70px;
+    padding: 0;
+    padding-bottom: 2%;
+    margin: 0;
+  }
+  
+  #one-liner-pt2 {
+      font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-list {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  #home-page-btn {
+    /* background-color: white;
+    border-radius: 5px 25px;
+    width: 150px;
+    height: 40px; */
+    /* font-size: 2rem; */
+      padding-top: 2%;
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-bottom: 2%;
+      border-radius: 25px;
+      border-color: #816AFE;
+      color: #6654cc;
+      /* font-weight: 800px; */
+      background-color: white;
+      /* box-shadow:0px 0px 3px 3px rgb(104, 104, 104); */
+  }
+  #home-page-btn:hover{
+    background-color: #816AFE;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #section-1{
+    display: block;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  #home-btn{
+    padding-top: 3%;
+  }
+  
+  #section-2{
+    display: block;
+    justify-content: space-between;
+    padding-left: 10%;
+  }
+  

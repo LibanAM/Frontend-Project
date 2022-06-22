@@ -9,8 +9,10 @@ const PopupEpisodes = ({content, handleClose, currentPodCastAcc, setCurrentPodCa
             headers: {'Content-Type': 'application/json'}
         })
         alert("added successfully!")
+        
     }
 
+    console.log(content);
 
     const episodesMap = content.podcastEpisodes.map(e => {
         return (

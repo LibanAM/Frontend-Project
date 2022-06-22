@@ -7,6 +7,7 @@ import RecommendedPodcasts from '../components/RecommendList';
 
 import { useNavigate } from 'react-router-dom';
 import './Account.css';
+import Footer from '../components/Footer';
 
 
 const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
@@ -63,17 +64,86 @@ const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
                 </h2>
                 
                 <ul className="categories-ul">
-                    <li><div className="category-comedy"><a href="/explore/Comedy">Comedy</a></div></li>
-                    <li><div><Link to="/explore/Family">Family</Link></div></li>
-                    <li><div><Link to="/explore/Factual">Factual</Link></div></li>
-                    <li><div><Link to="/explore/Sports">Sports</Link></div></li>
-                    <li><div><Link to="/explore/Business">Business</Link></div></li>
-                    <li><div><Link to="/explore/Health">Health</Link></div></li>
-                    <li><div><Link to="/explore/TrueCrime">True Crime</Link></div></li>
-                    <li><div><Link to="/explore">Others</Link></div></li>
+                    <li>
+                        <a href="/explore/Comedy" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/upDPy3ZhGt4" + ")"}}>
+                                <p>Comedy</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <Link to="/explore/Family" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/OMl0o6TSQXU" + ")"}}>
+                                <p>Family</p>
+                            <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
+
+
+                    <li>
+                        <Link to="/explore/Factual" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/L4YGuSg0fxs" + ")"}}>
+                                <p>Factual</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
+
+
+                    <li>
+                        <Link to="/explore/Sports" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/OgqWLzWRSaI" + ")"}}>
+                                <p>Sports</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
+
+
+                    <li>
+                        <Link to="/explore/Business" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/PhYq704ffdA" + ")"}}>
+                                <p>Business</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
+
+
+                    <li>
+                        <Link to="/explore/Health" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/-ftWfohtjNw" + ")"}}>
+                                <p>Health</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/explore/TrueCrime" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/PEJHULxUHZs" + ")"}}>
+                                <p>True Crime</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
+
+                    <li>
+                        <Link to="/explore" className="categories-link">
+                            <div className="category-box" style={{backgroundImage: "url(" + "https://source.unsplash.com/DNkoNXQti3c" + ")"}}>
+                                <p>Others</p>
+                                <div className="blackLayer"></div>
+                            </div>
+                        </Link>
+                    </li>
 
                 </ul>
             </div>
+
+            <Footer />
             
 
         </div>
