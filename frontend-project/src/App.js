@@ -53,7 +53,7 @@ function App() {
           </Route>
             
           <Route path='/pricing' element={<Pricing/>}></Route>
-<<<<<<< HEAD
+
           
           <Route path='/account' element={isLogin? <Account currentPodCastAcc={currentPodCastAcc}
                                                             setCurrentPodCastAcc={setCurrentPodCastAcc}/>: 
@@ -65,15 +65,7 @@ function App() {
                                                                   setCurrentPodCastAcc={setCurrentPodCastAcc}/>} />
                 <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}
                                                                    setCurrentPodCastAcc={setCurrentPodCastAcc}/>}/>
-=======
 
-          <Route path='/account' element={isLogin? <Account currentPodCastAcc={currentPodCastAcc}/>: 
-                                                  <SignUp isLogin={isLogin} setIsLogin={setIsLogin}
-                                                          currentPodCastAcc={currentPodCastAcc}
-                                                          setCurrentPodCastAcc={setCurrentPodCastAcc} />}>
-                <Route path='recommended' element={<RecommendList />} currentPodCastAcc={currentPodCastAcc}/>
-                <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}/>}/>
->>>>>>> ab1
 
           </Route>
 
