@@ -19,6 +19,10 @@ import Factual from './components/Factual';
 import Comedy from './components/Comedy';
 import Family from './components/Family';
 
+// kim 23
+import{useLocation} from 'react-router-dom';
+import {useEffect} from 'react';
+
 function App() {
   
   const [isLogin, setIsLogin] = usePersistedState('isLogin',false);
@@ -47,13 +51,17 @@ function App() {
           </Route>
             
           <Route path='/pricing' element={<Pricing/>}></Route>
-
-          <Route path='/account' element={isLogin? <Account currentPodCastAcc={currentPodCastAcc}/>: 
+          
+          <Route path='/account' element={isLogin? <Account currentPodCastAcc={currentPodCastAcc}
+                                                            setCurrentPodCastAcc={setCurrentPodCastAcc}/>: 
                                                    <SignUp isLogin={isLogin} setIsLogin={setIsLogin}
                                                            currentPodCastAcc={currentPodCastAcc}
                                                            setCurrentPodCastAcc={setCurrentPodCastAcc} />}>
-                <Route path='recommended' element={<RecommendList />} currentPodCastAcc={currentPodCastAcc}/>
-                <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}/>}/>
+
+                <Route path='recommended' element={<RecommendList currentPodCastAcc={currentPodCastAcc} 
+                                                                  setCurrentPodCastAcc={setCurrentPodCastAcc}/>} />
+                <Route path='watched' element={<WatchedEpisodeList currentPodCastAcc={currentPodCastAcc}
+                                                                   setCurrentPodCastAcc={setCurrentPodCastAcc}/>}/>
 
           </Route>
 
