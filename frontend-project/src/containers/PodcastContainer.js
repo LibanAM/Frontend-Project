@@ -37,6 +37,21 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                 <li><Link to='/'>Home</Link></li>
                 <li><Link to='/explore'>Explore</Link></li>
                 <li><Link to='/pricing'>Pricing</Link></li>
+                <div className="dropdown">
+                <button className="dropbtn"> Account</button>
+                <div className="dropdown-content" styleleft="left:0">
+                    <a><Link to='/account'>{isLogin ? "Account" : "Sign Up"}</Link></a>
+                    <a href="#">Link B</a>
+                    <a href="#">Link C</a>
+                </div>
+                </div>
+                {/* <li>
+                    <a className="nav-dropdown" href="#" role="button" data-bs-toggle="dropdown">Account</a>
+                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a className="dropdown-item" href="#">Action</a></li>
+                        <li><a className="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                </li> */}
                 <li><Link to='/account'><button>{isLogin ? "Account" : "Sign Up"}</button></Link></li>
                 <li><Link to='/login'><button onClick={handleLogin}>{isLogin ? "Logout" : "Login"}</button></Link></li>
             </ul>
