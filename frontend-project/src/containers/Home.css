@@ -80,7 +80,10 @@ div > #footer {
   border: solid;
   color: white;
   background-color: #816AFE;
-  padding: 10%;
+  /* padding: 10%; */
+  padding-top: 5%;
+  padding-bottom: 2%;
+
 }
 
 #Download-images {
