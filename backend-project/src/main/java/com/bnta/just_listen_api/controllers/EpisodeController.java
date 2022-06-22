@@ -83,7 +83,7 @@ public class EpisodeController {
     @PostMapping // localhost:8080/episodes
     public ResponseEntity<Episode> createEpisode(@RequestBody Episode newEpisode) {
         episodeRepository.save(newEpisode);
-        return new ResponseEntity<>(newEpisode, HttpStatus.CREATED);
+        return new ResponseEntity<>(newEpisode, HttpStatus.OK);
     }
 
     // DELETE

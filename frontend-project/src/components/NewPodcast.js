@@ -27,40 +27,49 @@ const NewPodcast = ({ postPodcast }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <h3>Add a new podcast: </h3>
-            <input type="text"
-                placeholder="Podcast Title"
-                name="title"
-                onChange={handleChange}
-                value={statePodcast.title} />
-            <input type="text"
-                placeholder="Podcast content note"
-                name="contentNote"
-                onChange={handleChange}
-                value={statePodcast.contentNote} />
-            <input type="text"
-                placeholder="Podcast description"
-                name="description"
-                onChange={handleChange}
-                value={statePodcast.description} />
-            <input type="text"
-                placeholder="Podcast category"
-                name="category"
-                onChange={handleChange}
-                value={statePodcast.category} />
-            <input type="text"
-                placeholder="Podcast rating"
-                name="rating"
-                onChange={handleChange}
-                value={statePodcast.rating} />
-            <input type="text"
-                placeholder="Podcast sources"
-                name="sources"
-                onChange={handleChange}
-                value={statePodcast.sources} />
-            <button type="submit">Submit</button>
-        </form>
+        <div className="newForm">
+            <form onSubmit={handleSubmit}>
+                <h3>Add a new podcast: </h3>
+                <label>Podcast title</label>
+                <input type="text"
+                    placeholder="Podcast title"
+                    name="title"
+                    onChange={handleChange}
+                    value={statePodcast.title} required />
+                <label>Podcast content note</label>
+                <input type="text"
+                    placeholder="Podcast content note"
+                    name="contentNote"
+                    onChange={handleChange}
+                    value={statePodcast.contentNote} required />
+                <label>Podcast description</label>
+                <input type="text"
+                    placeholder="Podcast description"
+                    name="description"
+                    onChange={handleChange}
+                    value={statePodcast.description} required />
+                <label>Podcast category</label>
+                <input type="text"
+                    placeholder="Podcast category"
+                    name="category"
+                    onChange={handleChange}
+                    value={statePodcast.category} required />
+                <label>Podcast rating</label>
+                <input type="number" step="0.1"
+                    min="0" max="5"
+                    placeholder="Podcast rating"
+                    name="rating"
+                    onChange={handleChange}
+                    value={statePodcast.rating} required />
+                <label>Podcast sources</label>
+                <input type="text"
+                    placeholder="Podcast sources"
+                    name="sources"
+                    onChange={handleChange}
+                    value={statePodcast.sources} required />
+                <button type="submit" className="submit-btn">Submit</button>
+            </form>
+        </div>
     );
 }
 
