@@ -30,6 +30,7 @@ const Explore = ({ isLogin, currentPodCastAcc }) => {
     })
       .then((response) => response.json())
       .then((data) => setPodcasts([...podcasts, data]));
+    window.location.reload(true)
   };
 
   const deletePodcast = (id) => {

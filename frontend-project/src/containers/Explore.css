@@ -109,21 +109,21 @@
 #delete-btn {
     width: fit-content;
     height: fit-content;
-    border-radius: 2px;
+    border-radius: 5px;
     transition-duration: 0.5s;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
 #delete-btn:hover {
-    background-color: #ba1414;
+    background-color: #ba1414a7;
     color: white;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
 
 }
 
-#delete-btn:active {
+/* #delete-btn:active {
     transform: translateY(4px);
-}
+} */
 
 #podcast-desc {
     font-weight: 40;
@@ -329,6 +329,14 @@ div>#footer {
     padding: 0;
 
 }
+
+.explore-ul-category > Link {
+    text-decoration: none;
+
+}
+
+
+
 .explore-ul-category > li{
     list-style-type: none;
     height: 100px;
@@ -336,63 +344,85 @@ div>#footer {
 
 }
 
-.explore-ul-category > li > a {
+/* .explore-ul-category > li > a {
     justify-content: space-around;
     text-decoration: none;
     color: white;
-}
+} */
 
 #explore-comedy {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://source.unsplash.com/969TUssR2S4/100x100);
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/969TUssR2S4/170x170);
     list-style-type: none;
+    border-radius: 5px;
     
 }
 
+#explore-comedy:hover {
+    background-color: rgba(255, 255, 255, 0.566);
+    z-index: 5;
+}
+
+#explore-comedy {
+    color: white;
+
+}
+
 #explore-family {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://source.unsplash.com/-UUfUnOc9-E/100x100);
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/-UUfUnOc9-E/170x170);
     list-style-type: none;
+    border-radius: 5px;
+
 
 }
 
 #explore-factual {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://source.unsplash.com/d9ILr-dbEdg/100x100);
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/d9ILr-dbEdg/170x170);
     list-style-type: none;
+    border-radius: 5px;
+
 
 }
 
 #explore-sport {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://source.unsplash.com/9HI8UJMSdZA/100x100);
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/9HI8UJMSdZA/170x170);
     list-style-type: none;
+    border-radius: 5px;
+
 
 }
 
 #explore-business {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://source.unsplash.com/iusJ25iYu1c/100x100);
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/iusJ25iYu1c/170x170);
     list-style-type: none;
+    border-radius: 5px;
+
 
 }
 
 #explore-health {
-    height: 100px;
-    width: 100px;
-    background-image: url(https://source.unsplash.com/hIgeoQjS_iE/100x100);
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/hIgeoQjS_iE/170x170);
     list-style-type: none;
+    border-radius: 5px;
+
 
 }
 
 #explore-truecrime {
-    height: 100px;
-    width: 100px;
+    height: 170px;
+    width: 170px;
     list-style-type: none;
-    background-image: url(https://source.unsplash.com/jM6Y2nhsAtk/100x100);
+    background-image: url(https://source.unsplash.com/jM6Y2nhsAtk/170x170);
+    border-radius: 5px;
 }
