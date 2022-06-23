@@ -11,6 +11,7 @@
 .cover-section-1{
     background-color: #816AFE;
     box-shadow:3px 5px 5px 0px rgb(104, 104, 104);
+    
 }
 
 #cover-section-2{
@@ -44,6 +45,10 @@
     color: #81e2a8;
     font-size: xx-large;
     font-weight: 900;
+    padding: 0;
+    margin-bottom: 0;
+
+
 }
 
 #one-liner-cover-2{
@@ -51,6 +56,9 @@
     font-size: x-large;
     font-weight: 900;
     padding-bottom: 0%;
+    padding: 0;
+    margin-top: 0;
+
 }
 
 .dancing-man{

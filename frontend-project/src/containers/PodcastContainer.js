@@ -42,7 +42,7 @@ const PodcastContainer = ({ isLogin, setIsLogin, currentPodCastAcc, setCurrentPo
                 <button className="dropbtn"> Account</button>
                 <div className="dropdown-content" styleleft="left:0">
                     <a><Link to='/account'>{isLogin ? "Account" : "Sign Up"}</Link></a>
-                    <a><Link to='/login'>{isLogin ? "Logout" : "Login"}</Link></a>
+                    <a onClick={handleLogin}><Link to='/login'>{isLogin ? "Logout" : "Login"}</Link></a>
                 </div>
             </div>
             <div id="search-bar">

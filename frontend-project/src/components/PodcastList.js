@@ -9,7 +9,6 @@ const PodcastList = ({podcasts, deletePodcast, showEpisode }) => {
 
     return(
         <>
-        <h3>List of Podcasts</h3>
         <div className="podcast">
         {podcastsComponents}
         </div>
