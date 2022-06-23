@@ -32,21 +32,21 @@
     box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
 }
 
-.podcast-title{
+/* .podcast-title{
     text-align: center;
     color:#816AFE;
     font-weight: 700;
     font-size:25px;
 
     font-family: 'Righteous', cursive;
-}
+} */
 
-.podcast-ul{
+/* .podcast-ul{
     list-style-type: none;
     padding-left:50px;
     font-family: 'Righteous', cursive;
     color:#816AFE;
-}
+} */
 
 .dislike-btn{
     position:absolute;
