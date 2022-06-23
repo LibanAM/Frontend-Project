@@ -1,0 +1,65 @@
+.watch-episodes-container{
+    margin-top: 50px;
+    margin-left:100px;
+    margin-right:100px;
+}
+
+.recent-watch-title{
+    padding-top:5px;
+    color:#fff;
+    background-color:#81e2a8;
+    height:30px;
+    width:200px;
+    text-align:center;
+    border-radius:10px;
+}
+
+
+.single-episodes-container{
+    background-color: rgb(255, 255, 255);
+    margin-bottom:50px;
+    padding-bottom: 20px;
+
+    border-radius:30px;
+
+    -webkit-box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
+    -moz-box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
+    box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
+}
+
+.episode-title{
+    padding-top:20px;
+    color:#81e2a8;
+    font-family: 'Righteous', cursive;
+    text-align:center;
+}
+
+.episode-ul{
+    list-style-type: none;
+    padding-left:50px;
+    font-family: 'Righteous', cursive;
+    color:#81e2a8;
+}
+
+.unwatch-btn{
+    position: relative;
+    left:45%;
+
+    border: 1px solid;
+    border-radius: 20px;
+    height: 30px;
+    font-weight: 600;
+    color:#81e2a8;
+    background-color:white;
+    font-size: 15px;
+
+    border: 1.5px solid #81e2a8;
+}
+
+.unwatch-btn:hover{
+    cursor:pointer;
+    box-shadow: 0 0 3px 0 #816AFE inset, 0 0 6px 2px #816AFE;
+    border: 1.5px solid #816AFE;
+
+    color:#816AFE;
+}
