@@ -58,7 +58,7 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
             <div className="single-podcast">
                 
                 <h3 className="podcast-title">{p.title}</h3>
-                    <ul>
+                    <ul className="podcast-ul">
                         <li>Content note: {p.contentNote}</li>
                         <li>Category: {p.category}</li>
                         <li>Description: {p.description}</li>
