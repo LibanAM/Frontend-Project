@@ -6,6 +6,8 @@
     height: 100vh;
     top: 0;
     left: 0;
+
+    /* background-image: url(../images/Group_1217.png); */
     
 }
 
@@ -21,6 +23,11 @@
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+
+    background-image: url(../images/Group_1180.png);
+    background-repeat: repeat;
+    background-position-x:left;
+    background-position-y: 50%;
 }
 
 .close-icon{
@@ -41,8 +48,10 @@
 
 
 .single-episode{
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin:50px;
-    background-color:#81e2a8;
+    background-color:white;
     border-radius:10px;
 
     -webkit-box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
@@ -61,4 +70,10 @@
 .popup-ul{
     
     list-style: none;
+}
+
+.add-watch-btn{
+    border: 1px solid;
+    border-radius: 10px;
+    height: 30px;
 }

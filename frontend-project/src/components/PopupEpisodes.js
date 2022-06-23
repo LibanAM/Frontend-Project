@@ -23,7 +23,7 @@ const PopupEpisodes = ({content, handleClose, currentPodCastAcc, setCurrentPodCa
                     <li>Description 📖 {e.description}</li>
                     
                 </ul>
-                <button onClick={() => handleAddEpisodeToWatch(e.id)}>Add to watch 👀</button>
+                <button onClick={() => handleAddEpisodeToWatch(e.id)} className="add-watch-btn">Add to watch 👀</button>
             </div>
         );
     })
