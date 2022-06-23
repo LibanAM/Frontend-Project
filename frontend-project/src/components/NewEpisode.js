@@ -42,6 +42,7 @@ const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
         <div className="newForm">
             <form onSubmit={handleFormSubmit}>
                 <h3>Add a new episode: </h3>
+                <label>Episode name</label>
                 <input
                     type="text"
                     placeholder="Episode name"
@@ -49,6 +50,7 @@ const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
                     onChange={handleChange}
                     value={stateEpisode.name}
                     required />
+                <label>Episode description</label>
                 <input
                     type="text"
                     placeholder="Episode description"
@@ -56,7 +58,7 @@ const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
                     onChange={handleChange}
                     value={stateEpisode.description}
                     required />
-
+                <label>Episode duration</label>
                 <input
                     type="text"
                     placeholder="Episode duration"
@@ -64,6 +66,7 @@ const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
                     onChange={handleChange}
                     value={stateEpisode.duration}
                     required />
+                <label>Episode posted</label>
                 <input
                     type="Date"
                     placeholder="Episode posted"
@@ -71,7 +74,7 @@ const NewEpisode = ({ podcasts, postEpisode, contributors }) => {
                     onChange={handleChange}
                     value={stateEpisode.datePosted}
                     required />
-
+                <label>Select a podcast</label>
                 <select name="podcast"
                     onChange={handlePodcast}
                     required>

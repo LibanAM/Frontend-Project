@@ -53,7 +53,6 @@
 #episodePopup {
     position: absolute;
     width: 100%;
-    height: 120vh;
 }
 
 .episodes {
@@ -66,6 +65,9 @@
     left: 0;
     width: 100%;
     z-index: 5;
+    margin: 0;
+    padding: 0;
+    height: background-color, 100vh;
 
 }
 
@@ -81,6 +83,17 @@
     margin: 20px;
     display: grid;
     grid-template-columns: auto;
+}
+
+#box > li, #box > h3 {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#box > h3 {
+    text-align: center;
+
 }
 
 .btn-close {
@@ -318,11 +331,68 @@ div>#footer {
 }
 .explore-ul-category > li{
     list-style-type: none;
+    height: 100px;
+
 
 }
 
 .explore-ul-category > li > a {
     justify-content: space-around;
+    text-decoration: none;
+    color: white;
+}
 
+#explore-comedy {
+    height: 100px;
+    width: 100px;
+    background-image: url(https://source.unsplash.com/969TUssR2S4/100x100);
+    list-style-type: none;
     
+}
+
+#explore-family {
+    height: 100px;
+    width: 100px;
+    background-image: url(https://source.unsplash.com/-UUfUnOc9-E/100x100);
+    list-style-type: none;
+
+}
+
+#explore-factual {
+    height: 100px;
+    width: 100px;
+    background-image: url(https://source.unsplash.com/d9ILr-dbEdg/100x100);
+    list-style-type: none;
+
+}
+
+#explore-sport {
+    height: 100px;
+    width: 100px;
+    background-image: url(https://source.unsplash.com/9HI8UJMSdZA/100x100);
+    list-style-type: none;
+
+}
+
+#explore-business {
+    height: 100px;
+    width: 100px;
+    background-image: url(https://source.unsplash.com/iusJ25iYu1c/100x100);
+    list-style-type: none;
+
+}
+
+#explore-health {
+    height: 100px;
+    width: 100px;
+    background-image: url(https://source.unsplash.com/hIgeoQjS_iE/100x100);
+    list-style-type: none;
+
+}
+
+#explore-truecrime {
+    height: 100px;
+    width: 100px;
+    list-style-type: none;
+    background-image: url(https://source.unsplash.com/jM6Y2nhsAtk/100x100);
 }
