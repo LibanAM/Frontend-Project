@@ -17,8 +17,8 @@ const PopupEpisodes = ({content, handleClose, currentPodCastAcc, setCurrentPodCa
     const episodesMap = content.podcastEpisodes.map(e => {
         return (
             <div className="single-episode">
-                <h3>{e.name}</h3>
-                <ul>
+                <h3 className="popup-episode-title">{e.name}</h3>
+                <ul className="popup-ul">
                     <li>{e.datePosted} {e.duration} minutes</li>
                     <li>Description 📖 {e.description}</li>
                     

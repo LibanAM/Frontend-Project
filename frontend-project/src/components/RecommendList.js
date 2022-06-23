@@ -64,8 +64,10 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
                         <li>Description: {p.description}</li>
                         <li>Rating: {p.rating}/5</li>
                     </ul>
-                <button onClick={() => handleDislikeRPodcast(p.id)}><IoMdHeartDislike/></button>
-                <button onClick={() => handlePopup(p.id)}>Episodes</button>
+                <button onClick={() => handleDislikeRPodcast(p.id)} className="dislike-btn" title="dislike this podcast">
+                    <IoMdHeartDislike className="dislike-heart"/>
+                </button>
+                <button onClick={() => handlePopup(p.id)} className="expisodes-btn">Episodes</button>
                 
                 {isOpen && <PopupEpisodes content={currentPodcast} 
                                           handleClose={handlePopup}
