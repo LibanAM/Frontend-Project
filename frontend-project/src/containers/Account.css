@@ -1,10 +1,16 @@
+/* welcomeback part */
+
 
 .account-container{
-    background-image: url(../images/Group_1180.png);
+    /* background-image: url(../images/Group_1180.png);
     background-repeat: no-repeat;
     background-position-x:90%;
-    background-position-y: 10%;
+    background-position-y: 10%; */
     
+    background-image:url(../images/Illustration.png);
+    background-repeat: no-repeat;
+    background-position-x:90%;
+    background-position-y: 20%;
 }
 
 .welcomeback-title{
@@ -17,6 +23,11 @@
     color:rgb(34, 34, 34);
     font-weight:900;
     font-size:30px;
+
+    background-image: url(../images/Group_1180.png);
+    background-repeat: no-repeat;
+    background-position-x:90%;
+    background-position-y: 0%;
 }
 
 .welcome-back-div{
@@ -30,21 +41,107 @@
     color:#81e2a8;
     background-color:#816AFE;
     border-radius:5px;
-
-
 }
 
 
+/* recommended podcast and wacthed episodes title */
+.recommend-watch-ul{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    
+    padding-top: 50px;
+    margin-left:100px;
+    padding-left: 0;
+    
+}
+
+.recommend-li{
+    display: flex;
+    justify-content: space-between;
+    height:85px;
+    width:320px;
+    background-color:#816AFE;
+    margin-right: 150px;
+    border-radius: 10px;
+    
+}
+
+/* .recommend-li:hover{
+    background-color:#81e2a8;
+    color:#816AFE;
+} */
+
+.recommed-link {
+    text-decoration: none;
+    cursor:pointer;
+    font-weight: 800;
+    font-size:20px;
+    text-transform: uppercase;
+    padding-top: 15px;
+    margin-bottom: 0;
+    text-align: center;
+    color:#81e2a8;
+}
+
+.recommed-link:hover{
+    color:#816AFE;
+    background-color:#81e2a8;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
 
 
+.showmore-recommendation-button{
+    
+    border: 1px solid;
+    border-color:transparent;
+    background-color:#816AFE;
+    color: #81e2a8;
+    font-size:40px;
+    border-radius:10px;
 
+}
 
+.showmore-recommendation-button:hover{
+    border-color: none;
+    color:#816AFE;
+    background-color:#81e2a8;
+}
 
+.watched-li{
+    display:flex;
+    justify-content: space-between;
+    height:85px;
+    width:150px;
+    background-color:#816AFE;
+    margin-right: 150px;
+    border-radius: 10px;
+}
 
+.watched-li:hover{
+    background-color:#81e2a8;
+    color:#816AFE;
+}
 
+.watched-link{
+    text-decoration: none;
+    cursor:pointer;
+    font-weight: 800;
+    font-size:20px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 0;
+    text-align: center;
 
+    color:#81e2a8;
+}
 
-
+.watched-link:hover{
+    background-color:#81e2a8;
+    color:#816AFE;
+    border-radius:10px;
+}
 
 
 
@@ -55,16 +152,20 @@
 /* more categories part styling */
 
 .more-categories-container{
-    margin-top:50px;
+    margin-top:150px;
     margin-bottom:50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10%;
+    margin-right: 8%;
     text-align: center;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
 }
 
 .categories-title{
-    background-color:white;
+    background-color:transparent;
     text-align: center;
     
     
@@ -72,7 +173,36 @@
 
 /* try for fancy title */
 
+.button {
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: -60px;
+    margin-bottom: 0;
+    cursor: pointer;
+    display: inline-block;
+    
+}
+
+.categories-title {
+    background-color: transparent;
+    border: 3px solid #816AFE;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #816AFE;
+}
+
+.categories-title:hover {
+    box-shadow: 0 0 10px 0 #81e2a8 inset, 0 0 20px 2px #81e2a8;
+    border: 3px solid #81e2a8;
+
+}
 
 
 /* --------------------- */
@@ -85,14 +215,17 @@
     padding-bottom: 0;
     font-weight:800;
     font-size: 40px;
+    cursor:pointer;
     
-
+    position: relative;
+    
     color:#816AFE;
 }
 
 .more-categories-link:hover{
     text-align: center;
     color:#81e2a8;
+    
 }
 
 
@@ -108,6 +241,7 @@
 
 .categories-ul > li{
     padding-right: 20px;
+    padding-left: 20px;
     padding-bottom: 10px;
 }
 

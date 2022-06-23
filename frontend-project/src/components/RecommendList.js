@@ -3,7 +3,7 @@ import usePersistedState from "./usePersistedState";
 import {useEffect, useState} from "react";
 import {IoMdHeartDislike} from 'react-icons/io';
 import PopupEpisodes from "./PopupEpisodes";
-
+import './RecommendList.css';
 
 const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     
@@ -57,15 +57,17 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
         return (
             <div className="single-podcast">
                 
-                <h3>{p.title}</h3>
-                    <ul>
+                <h3 className="podcast-title">{p.title}</h3>
+                    <ul className="podcast-ul">
                         <li>Content note: {p.contentNote}</li>
                         <li>Category: {p.category}</li>
                         <li>Description: {p.description}</li>
                         <li>Rating: {p.rating}/5</li>
                     </ul>
-                <button onClick={() => handleDislikeRPodcast(p.id)}><IoMdHeartDislike/></button>
-                <button onClick={() => handlePopup(p.id)}>Episodes</button>
+                <button onClick={() => handleDislikeRPodcast(p.id)} className="dislike-btn" title="dislike this podcast">
+                    <IoMdHeartDislike className="dislike-heart"/>
+                </button>
+                <button onClick={() => handlePopup(p.id)} className="expisodes-btn">Episodes</button>
                 
                 {isOpen && <PopupEpisodes content={currentPodcast} 
                                           handleClose={handlePopup}
@@ -82,7 +84,7 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
     return (
         <div className="recommended-container">
-            <h3>{date.toLocaleDateString()}</h3>
+            <h3 className="r-date">{date.toLocaleDateString()}</h3>
             <div className="recommend-list">
                 
                 {rListMap}
