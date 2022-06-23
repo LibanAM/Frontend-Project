@@ -5,10 +5,10 @@ h2 {
   margin: 0;
 }
 
-#gradient-1 {
+/*#gradient-1 { */
   /* background: linear-gradient(#646fd4, white); */
   /* background-color: #816afe; */
-}
+/* } */
 
 #gradient-2 {
   background: linear-gradient(white, #dbdffd);

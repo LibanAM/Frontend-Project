@@ -11,7 +11,7 @@ import picture from "../images/logo603x186.png";
 import GooglePlay from "../images/GooglePlay.png";
 import AppStore from "../images/AppStore.png";
 
-const Explore = ({isLogin, currentPodCastAcc}) => {
+const Explore = ({ isLogin, currentPodCastAcc }) => {
   //  adding and removing podcasts
 
   const [podcasts, setPodcasts] = useState([]);
@@ -30,6 +30,7 @@ const Explore = ({isLogin, currentPodCastAcc}) => {
     })
       .then((response) => response.json())
       .then((data) => setPodcasts([...podcasts, data]));
+    window.location.reload(true)
   };
 
   const deletePodcast = (id) => {
@@ -101,7 +102,7 @@ const Explore = ({isLogin, currentPodCastAcc}) => {
   }
 
   const [isAdmin, setIsAdmin] = useState(currentPodCastAcc.admin);
-  
+
   // const userIsAdmin = () => {
   //   console.log(currentPodCastAcc.admin);
   //   if (isLogin && currentPodCastAcc.admin == true) {
@@ -131,24 +132,17 @@ const Explore = ({isLogin, currentPodCastAcc}) => {
         showEpisode={showEpisode}
       />
 
-
-
-
-
-
-
-
       {/* catagories display list */}
       <div className="explore-categories" id="explore-categories">
         <h2>Explore by categories</h2>
         <ul className="explore-ul-category">
-          <li><Link to='/explore/Comedy'>Comedy</Link></li>
-          <li><Link to='/explore/Family'>Family</Link></li>
-          <li><Link to='/explore/Factual'>Factual</Link></li>
-          <li><Link to='/explore/Sport'>Sports</Link></li>
-          <li><Link to='/explore/Business'>Business</Link></li>
-          <li><Link to='/explore/Health'>Health</Link></li>
-          <li><Link to='/explore/TrueCrime'>True Crime</Link></li>
+          <Link to='/explore/Comedy'><li id="explore-comedy">Comedy</li></Link>
+          <Link to='/explore/Family'><li id="explore-family">Family</li></Link>
+          <Link to='/explore/Factual'><li id="explore-factual">Factual</li></Link>
+          <Link to='/explore/Sport'><li id="explore-sport">Sports</li></Link>
+          <Link to='/explore/Business'><li id="explore-business">Business</li></Link>
+          <Link to='/explore/Health'><li id="explore-health">Health</li></Link>
+          <Link to='/explore/TrueCrime'><li id="explore-truecrime">True Crime</li></Link>
         </ul>
 
         <Outlet />

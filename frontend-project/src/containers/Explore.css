@@ -53,7 +53,6 @@
 #episodePopup {
     position: absolute;
     width: 100%;
-    height: 120vh;
 }
 
 .episodes {
@@ -66,6 +65,9 @@
     left: 0;
     width: 100%;
     z-index: 5;
+    margin: 0;
+    padding: 0;
+    height: background-color, 100vh;
 
 }
 
@@ -83,6 +85,17 @@
     grid-template-columns: auto;
 }
 
+#box > li, #box > h3 {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#box > h3 {
+    text-align: center;
+
+}
+
 .btn-close {
     cursor: pointer;
     border: 1px solid #999;
@@ -96,21 +109,21 @@
 #delete-btn {
     width: fit-content;
     height: fit-content;
-    border-radius: 2px;
+    border-radius: 5px;
     transition-duration: 0.5s;
-    font-weight: 400;
+    /* font-weight: 400; */
 }
 
 #delete-btn:hover {
-    background-color: #ba1414;
+    background-color: #ba1414a7;
     color: white;
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
 
 }
 
-#delete-btn:active {
+/* #delete-btn:active {
     transform: translateY(4px);
-}
+} */
 
 #podcast-desc {
     font-weight: 40;
@@ -316,13 +329,100 @@ div>#footer {
     padding: 0;
 
 }
-.explore-ul-category > li{
-    list-style-type: none;
+
+.explore-ul-category > Link {
+    text-decoration: none;
 
 }
 
-.explore-ul-category > li > a {
-    justify-content: space-around;
 
+
+.explore-ul-category > li{
+    list-style-type: none;
+    height: 100px;
+
+
+}
+
+/* .explore-ul-category > li > a {
+    justify-content: space-around;
+    text-decoration: none;
+    color: white;
+} */
+
+#explore-comedy {
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/969TUssR2S4/170x170);
+    list-style-type: none;
+    border-radius: 5px;
     
+}
+
+#explore-comedy:hover {
+    background-color: rgba(255, 255, 255, 0.566);
+    z-index: 5;
+}
+
+#explore-comedy {
+    color: white;
+
+}
+
+#explore-family {
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/-UUfUnOc9-E/170x170);
+    list-style-type: none;
+    border-radius: 5px;
+
+
+}
+
+#explore-factual {
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/d9ILr-dbEdg/170x170);
+    list-style-type: none;
+    border-radius: 5px;
+
+
+}
+
+#explore-sport {
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/9HI8UJMSdZA/170x170);
+    list-style-type: none;
+    border-radius: 5px;
+
+
+}
+
+#explore-business {
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/iusJ25iYu1c/170x170);
+    list-style-type: none;
+    border-radius: 5px;
+
+
+}
+
+#explore-health {
+    height: 170px;
+    width: 170px;
+    background-image: url(https://source.unsplash.com/hIgeoQjS_iE/170x170);
+    list-style-type: none;
+    border-radius: 5px;
+
+
+}
+
+#explore-truecrime {
+    height: 170px;
+    width: 170px;
+    list-style-type: none;
+    background-image: url(https://source.unsplash.com/jM6Y2nhsAtk/170x170);
+    border-radius: 5px;
 }

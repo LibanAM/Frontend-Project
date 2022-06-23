@@ -102,6 +102,13 @@ nav > ul > li > a:hover {
     background-color: #f1f1f1;
 }
 
+#search-btn{
+    height: 37px;
+    width: 37px;
+
+
+}
+
 /* #search-bar > a{
     float: left;
     display: block;
