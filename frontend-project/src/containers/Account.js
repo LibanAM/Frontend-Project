@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Routes, Route, Link, Outlet} from 'react-router
 
 // import {HashLink} from 'react-router-hash-link';
 import RecommendedPodcasts from '../components/RecommendList';
-
+import {IoIosRefreshCircle} from 'react-icons/io';
 
 import { useNavigate } from 'react-router-dom';
 import './Account.css';
@@ -39,6 +39,11 @@ const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     }
 
 
+    const handleNavToExplore = () => {
+        navigate('/explore');
+    }
+
+
 
     return(
         <div className="account-container">
@@ -48,22 +53,28 @@ const Account = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
                     <li className="user-name">&nbsp;{currentPodCastAcc.username}&nbsp;</li>
                 </ul>
             </div>
-            <ul>
-                <li>
-                    <Link to='/account/recommended'>Today's Recommended Podcasts For you</Link>
-                    <button onClick={handleGetRecommended} className="showmore-recommendation-button">show more</button>
+            <ul className="recommend-watch-ul">
+                <li className="recommend-li">
+                    <Link to='/account/recommended' className="recommed-link">Today's Recommended Podcasts For you</Link>
+                    <button onClick={handleGetRecommended} className="showmore-recommendation-button"
+                            title="You are only allowed to have 3 recommendation at a time">
+                        <IoIosRefreshCircle/>
+                    </button>
                 </li>
-                <li><Link to='/account/watched'>Watched Episodes</Link></li>
+                <li className="watched-li"><Link to='/account/watched' className="watched-link">Watched Episodes</Link></li>
             </ul>
 
             <Outlet />
 
 
             <div className="more-categories-container">
-                <div className="categories-title">
-                    <Link to={{pathname:'/explore', hash:'#explore-categories'}} className="more-categories-link">
+                <div>
+                <div className="button categories-title">
+                
+                    <Link to="/explore" className="more-categories-link" onClick={handleNavToExplore}>
                         MORE CATEGORIES
                     </Link>
+                </div>
                 </div>
                 
                 <ul className="categories-ul">

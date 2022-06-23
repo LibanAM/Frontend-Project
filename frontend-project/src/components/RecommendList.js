@@ -3,7 +3,7 @@ import usePersistedState from "./usePersistedState";
 import {useEffect, useState} from "react";
 import {IoMdHeartDislike} from 'react-icons/io';
 import PopupEpisodes from "./PopupEpisodes";
-
+import './RecommendList.css';
 
 const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     
@@ -57,7 +57,7 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
         return (
             <div className="single-podcast">
                 
-                <h3>{p.title}</h3>
+                <h3 className="podcast-title">{p.title}</h3>
                     <ul>
                         <li>Content note: {p.contentNote}</li>
                         <li>Category: {p.category}</li>
@@ -82,7 +82,7 @@ const RecommendList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
 
     return (
         <div className="recommended-container">
-            <h3>{date.toLocaleDateString()}</h3>
+            <h3 className="r-date">{date.toLocaleDateString()}</h3>
             <div className="recommend-list">
                 
                 {rListMap}

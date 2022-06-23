@@ -1,0 +1,32 @@
+.recommended-container{
+    margin-top: 50px;
+    margin-left:100px;
+    margin-right:100px;
+
+}
+
+.r-date{
+    color:#fff;
+    background-color:#816AFE;
+    height:30px;
+    width:120px;
+    text-align:center;
+    border-radius:10px;
+
+}
+
+.recommend-list{
+    display:flex;
+    flex-direction:column;
+}
+
+.single-podcast{
+    background-color: rgb(240, 245, 250);
+    margin-bottom:50px;
+
+    border-radius:30px;
+
+    -webkit-box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
+    -moz-box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
+    box-shadow: 0 10px 6px -6px rgb(152, 152, 152);
+}
