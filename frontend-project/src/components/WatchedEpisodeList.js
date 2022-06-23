@@ -1,5 +1,6 @@
 import usePersistedState from "./usePersistedState";
 import {useEffect, useState} from 'react';
+import './WatchedEpisodeList.css';
 
 const WatchedEpisodeList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     
@@ -30,13 +31,13 @@ const WatchedEpisodeList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     const episodesMap = watchedEpisodes.map(e => {
         return (
             <div className="single-episodes-container">
-                <h3>{e.name}</h3>
-                <ul>
+                <h3 className="episode-title">{e.name}</h3>
+                <ul className="episode-ul">
                     <li>{e.datePosted} {e.duration} minutes</li>
                     <li>Description 📖 {e.description}</li>
                     
                 </ul>
-                <button onClick={() => handleUnwatch(e.id)}>Unwatch</button>
+                <button onClick={() => handleUnwatch(e.id)} className="unwatch-btn">Unwatch</button>
             </div>
 
         );
@@ -47,7 +48,7 @@ const WatchedEpisodeList = ({currentPodCastAcc, setCurrentPodCastAcc}) => {
     
     return (
         <div className="watch-episodes-container">
-            <h3>Recently Watched</h3>
+            <h3 className="recent-watch-title">Recently Watched</h3>
             {episodesMap}
 
         </div>
