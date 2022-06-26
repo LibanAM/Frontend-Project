@@ -64,3 +64,4 @@ Here are a few ideas on how we would like to expand on the frontend desgin:
 
 # Acknowledegements
 A massive thanks to the [BNTA](https://techacademy.brightnetwork.co.uk/) team, and especially to our trainers [Richard](https://github.com/biancakendall29/w07_server_side_project#summary) and [Anna](https://github.com/biancakendall29/w07_server_side_project#summary)!
+# frontend-project
