@@ -1,6 +1,6 @@
 # JustListen Front-end Project
 
-        Our podcats are better than our web design!
+        Our podcasts are better than our web design!
 
 We fellow podcasters are a team consisting of [BNTA](https://techacademy.brightnetwork.co.uk/) Cohort 5 members : [Liban](https://github.com/LibanAM), [Kim](https://github.com/JinleYe) and [Amber](https://github.com/aakamara)
 
